@@ -125,16 +125,17 @@ a{
     flex-wrap: wrap;
     position: relative;
     float: left;
-    width: calc(100% / 6 * 2.90);
+    width: calc(100% / 6 * 1.5);
     margin-left: .5%;
+    background-color: gray;
 }
 .specinfo1{
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    margin-left: 50%;
+    margin-left: 27%;
     float: right;    
-    width: calc(100% / 6 * 2.90);
+    width: calc(100% / 6 * 5);
 }
 
 .compbox2{
@@ -199,16 +200,17 @@ a{
     flex-wrap: wrap;
     position: relative;
     float: left;
-    width: calc(100% / 6 * 2.90);
+    width: calc(100% / 6 * 1.5);
     margin-left: .5%;
+    background-color: gray;
 }
 .specinfo2{
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    margin-left: 50%;
+    margin-left: 27%;
     float: right;    
-    width: calc(100% / 6 * 2.90);
+    width: calc(100% / 6 * 5);
 }
 
 .compbox3{
@@ -273,16 +275,17 @@ a{
     flex-wrap: wrap;
     position: relative;
     float: left;
-    width: calc(100% / 6 * 2.90);
+    width: calc(100% / 6 * 1.5);
     margin-left: .5%;
+    background-color: gray;
 }
 .specinfo3{
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    margin-left: 50%;
+    margin-left: 27%;
     float: right;    
-    width: calc(100% / 6 * 2.90);
+    width: calc(100% / 6 * 5);
 }
 
 .compbox4{
@@ -347,16 +350,17 @@ a{
     flex-wrap: wrap;
     position: relative;
     float: left;
-    width: calc(100% / 6 * 2.90);
+    width: calc(100% / 6 * 1.5);
     margin-left: .5%;
+    background-color: gray;
 }
 .specinfo4{
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    margin-left: 50%;
+    margin-left: 27%;
     float: right;    
-    width: calc(100% / 6 * 2.90);
+    width: calc(100% / 6 * 5);
 }
 
 .fincalc{
