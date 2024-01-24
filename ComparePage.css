@@ -2,7 +2,7 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .navi{
-    background-image: url("pics/sia/blckwht.jpg");
+    background-image: url("sia/blckwht.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     max-height: 500vh;
@@ -29,7 +29,7 @@ a{
     flex-wrap: wrap;
     position: relative;
     margin-left: 10%;
-    width: calc(100% / 12 * 1.5);
+    width: calc(100% / 12 * 1.75);
 }
 .secnav{
     background-color: rgb(0, 0, 0, .75);
@@ -62,6 +62,7 @@ a{
     background-color: white;
     border: solid;
 }
+
 .compbox1{
     display: flex;
     flex-wrap: wrap;
@@ -87,26 +88,53 @@ a{
     width: calc(100% / 12 * 4);
     margin-left: 10%;
 }
+.compbtn1{
+    margin-left: 8%;
+}
 .specs1{
     background-color: white;
     width: calc(100% / 6 * 6);
     margin: .5%;
+    height: 50vh;
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px black; 
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: gray; 
+        border-radius: 10px;
+      }
+
 }
-.specparts1>div{
+.specu1{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    height: 10vh;
-    width: calc(100% / 6 * 2.5);
+    width: calc(100% / 12 * 12);
+    height: 35vh;
+    overflow: scroll;
+    overflow-x:hidden ;
 }
-.specinfo1>div{
+.specparts1{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    width: calc(100% / 6 * 3);
-    margin: 1%;
-    height: 10vh;
-    float: right;
+    float: left;
+    width: calc(100% / 6 * 2.90);
+    margin-left: .5%;
+}
+.specinfo1{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-left: 50%;
+    float: right;    
+    width: calc(100% / 6 * 2.90);
 }
 
 .compbox2{
@@ -118,7 +146,7 @@ a{
     margin: .25%;
     height: 60vh;
     align-items: center;
-    float: right;
+    float: left;
 }
 .category2{
     display: flex;
@@ -134,27 +162,55 @@ a{
     width: calc(100% / 12 * 4);
     margin-left: 10%;
 }
+.compbtn2{
+    margin-left: 8%;
+}
 .specs2{
     background-color: white;
     width: calc(100% / 6 * 6);
     margin: .5%;
+    height: 50vh;
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px black; 
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: gray; 
+        border-radius: 10px;
+      }
+
 }
-.specparts2>div{
+.specu2{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    height: 10vh;
-    width: calc(100% / 6 * 2.5);
+    width: calc(100% / 12 * 12);
+    height: 35vh;
+    overflow: scroll;
+    overflow-x:hidden ;
 }
-.specinfo2>div{
+.specparts2{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    width: calc(100% / 6 * 3);
-    margin: 1%;
-    height: 10vh;
-    float: right;
+    float: left;
+    width: calc(100% / 6 * 2.90);
+    margin-left: .5%;
 }
+.specinfo2{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-left: 50%;
+    float: right;    
+    width: calc(100% / 6 * 2.90);
+}
+
 .compbox3{
     display: flex;
     flex-wrap: wrap;
@@ -180,26 +236,53 @@ a{
     width: calc(100% / 12 * 4);
     margin-left: 10%;
 }
+.compbtn3{
+    margin-left: 8%;
+}
 .specs3{
     background-color: white;
     width: calc(100% / 6 * 6);
     margin: .5%;
+    height: 50vh;
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px black; 
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: gray; 
+        border-radius: 10px;
+      }
+
 }
-.specparts3>div{
+.specu3{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    height: 10vh;
-    width: calc(100% / 6 * 2.5);
+    width: calc(100% / 12 * 12);
+    height: 35vh;
+    overflow: scroll;
+    overflow-x:hidden ;
 }
-.specinfo3>div{
+.specparts3{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    width: calc(100% / 6 * 3);
-    margin: 1%;
-    height: 10vh;
-    float: right;
+    float: left;
+    width: calc(100% / 6 * 2.90);
+    margin-left: .5%;
+}
+.specinfo3{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-left: 50%;
+    float: right;    
+    width: calc(100% / 6 * 2.90);
 }
 
 .compbox4{
@@ -211,7 +294,7 @@ a{
     margin: .25%;
     height: 60vh;
     align-items: center;
-    float: right;
+    float: left;
 }
 .category4{
     display: flex;
@@ -227,33 +310,61 @@ a{
     width: calc(100% / 12 * 4);
     margin-left: 10%;
 }
+.compbtn4{
+    margin-left: 8%;
+}
 .specs4{
     background-color: white;
     width: calc(100% / 6 * 6);
     margin: .5%;
+    height: 50vh;
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px black; 
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: gray; 
+        border-radius: 10px;
+      }
+
 }
-.specparts4>div{
+.specu4{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    height: 10vh;
-    width: calc(100% / 6 * 2.5);
+    width: calc(100% / 12 * 12);
+    height: 35vh;
+    overflow: scroll;
+    overflow-x:hidden ;
 }
-.specinfo4>div{
+.specparts4{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    width: calc(100% / 6 * 3);
-    margin: 1%;
-    height: 10vh;
-    float: right;
+    float: left;
+    width: calc(100% / 6 * 2.90);
+    margin-left: .5%;
 }
+.specinfo4{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-left: 50%;
+    float: right;    
+    width: calc(100% / 6 * 2.90);
+}
+
 .fincalc{
     text-align: center;
     font-size: 9vh;
 }
 .calcu{
-    background-image: url(pics/sia/traffic.jpg);
+    background-image: url(sia/traffic.jpg);
     background-position: center;
     background-repeat:no-repeat;
     font-size: 5vh;
@@ -284,4 +395,54 @@ a{
 .secbotnav>div{
     margin-left: 2%;
     opacity: 50%;
+}
+
+#facebook {
+    color: white;
+    margin-left: 50%;
+    opacity: 50%;
+}
+
+#instagram{
+    color: white;
+    margin-left: 2%;
+    opacity: 50%;
+}
+
+#youtube{
+    color: white;
+    margin-left: 2%;
+    opacity: 50%;
+}
+
+#pinterest{
+    color: white;
+    margin-left: 2%;
+    opacity: 50%;
+}
+
+#carticon{
+    color: white;
+    margin-right: 2%;
+}
+
+#profileicon{
+    color: white;
+    margin-right: 2%;
+}
+
+#envelope{
+    color: white;
+    margin-left: -25%;
+    margin-right: 2%;
+}
+
+#phone{
+    color: white;
+    margin-right: 2%;
+}
+
+#glass{
+    color: white;
+    margin-left: 5%;
 }
