@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+	*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+		
+		.wcu{
+		font-size: 100px;
+		width: calc(100% / 12 * 12);
+		text-align: center;
+		}
+
+			.navi{
+				background-image: url("hd.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				max-height: 500vh;
+				color: white;
+			}
+			a{
+				text-decoration: none;
+				color: white;
+			}
+			.icon{
+				margin-left: 4%;
+			}
+		.topnav{
+			background-color: rgb(0, 0, 0, .75);
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			width: calc(100% / 12 * 12);
+			height:5vh;
+
+		}
+		.topnav>div{
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			margin-left: 10%;
+			width: calc(100% / 12 * 1.5);
+		}
+		.secnav{
+			background-color: rgb(0, 0, 0, .75);
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			width: calc(100% / 12 * 12);
+			height: 10vh;
+			align-items: center;
+
+		}
+		.secnav>div{
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			margin-left: 5%;
+			width: calc(100% / 12 * .75);
+		}
+		.aboutus{
+			text-align: center;
+			font-size: 20vh;
+			padding: 5%;
+		}
+       
+
+        .description {
+			color: black;
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;			
+			float: left;
+			width: calc(100% / 12 * 5.75);
+        }
+
+        .images {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+			
+        }
+
+        .image1 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+			width: calc(100% / 12 * 8);
+        }
+		.image2 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+			width: calc(100% / 12 * 10);
+        }
+		.image3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+			width: calc(100% / 12 * 8);
+        }
+
+        img {
+            max-width: 100%;
+            height: 100px;
+        }
+
+        .image-description {
+            margin-left: 10px;
+            max-width: 150px; 
+            text-align: left;
+        }
+
+        .addimages {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+			width: calc(100% / 12 * 12);
+			position: relative;
+			
+        }
+		 .addimages2 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+			width: calc(100% / 12 * 12);
+			position: relative;
+			float: center;
+        }
+		
+		
+		.add4 {
+			display: flex;
+            flex-wrap: wrap;
+			align-items: center;
+			position: relative;
+			float: left;
+			width: calc(100% / 12 * 6);
+        }
+
+		.add5 {
+			display: flex;
+            flex-wrap: wrap;
+			position: relative;
+            align-items: center;
+			float: right;
+			width: calc(100% / 12 * 6);
+			
+			
+        }
+		.add6 {
+            display: flex;
+            flex-wrap: wrap;
+			align-items: center;
+			position: relative;
+			width: calc(100% / 12 * 12);
+			margin-left: 28%;
+        }
+		
+        .addimgdes {
+            margin-top: 10px;
+            max-width: 150px; 
+            text-align: center;
+        }
+		.secpage{
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+		width: calc(100% / 12 * 12);
+		}
+		
+		.wwh{
+		font-size: 40px;
+		width: calc(100% / 12 * 5);
+		}
+		
+		.mop{
+		font-size: 100px;
+		width: calc(100% / 12 * 12);
+		text-align: center;
+		
+		}
+		.image4{
+		background-color: grey;
+		}
+		
+		.image5{
+		background-color: grey;
+		}
+		
+		.image6{
+		background-color: grey;
+		}
+		
+		.moppt{
+		background-color: grey;
+		display: flex;
+		position: relatives;
+		margin: 1%;
+		overflow-y: auto; 
+		
+		height: 100vh;
+		width: calc(100% / 12 * 7);
+		margin-left: 20%;
+		}
+		
+		.professionals{
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			width: calc(100% / 12 * 7);
+			margin-left: 5%;
+			margin-top: 2%;
+		}
+		
+		.prof1{
+		display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			width: calc(100% / 12 * 6);
+			font-size: 40px;
+		}
+		
+		.proflogo{
+			display: flex;
+			
+			position: relative;
+			width: calc(100% / 12 * 6);
+			height: 30%;
+		
+		}
+		
+		.plogo{
+		width: 80%;
+		height: 100%;
+		}
+		
+    </style>
+</head>
+<body>
+
+
+ <div class="navi">
+        <div class="topnav">
+            <div><a href="#">nexusmanufacture@email.com</a></div>
+            <div><a href="#">+6392-345-6789</a></div>
+            <div><a href="#">Log In or Sign Up</a></div>
+            <div><a href="#">CART</a></div>
+        </div>
+        
+        <div class="secnav">
+            <img class= "icon" src="sia/sampleicon.png" alt="sampleicon" width="90" height="50">
+            <div><a href="#">HOME</a></div>
+            <div><a href="#">NEWS</a></div>
+            <div><a href="#">CATEGORY</a></div>
+            <div><a href="#">SERVICE</a></div>
+            <div><a href="#">ITEMS</a></div>
+            <div><a href="#">ABOUT US</a></div>
+            <div><input type="text" placeholder="Search.."></div>
+        </div>
+		  <div class="aboutus" style="color: black;">
+            ABOUT US
+        </div>
+   
+    </div>
+<div class="secpage">
+ 
+ <div class="wcu">
+ Why Choose Us?
+ </div>
+ 
+ 
+        <div class="description">
+			<div class="wwh">
+			 What We Have !
+			 </div>
+            <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit. Proin velodio sit amet tellus vestibulum congue. <br>Nulla facilisi. Sed sit amet arcu ac lectus luctus lacinia. Nulla facilisi. <br>Sed vitae nisi euismod, ultrices libero id, eleifend velit. Fusce <br>nec tortor vel nulla laoreet tincidunt a a odio.</p>
+        </div>
+
+        <div class="images">
+            <div class="image1">
+                <img src="c.jpg" alt="Image 1">
+                <div class="image">Description for Image 1</div>
+            </div>
+
+            <div class="image2">
+                <img src="c.jpg" alt="Image 2">
+                <div class="image">Description for Image 2</div>
+            </div>
+
+            <div class="image3">
+                <img src="c.jpg" alt="Image 3">
+                <div class="image">Description for Image 3</div>
+            </div>
+        </div>
+ 
+
+    <div class="addimages">
+	<div class="add4">
+        <div class="addimgcon4">
+            <img src="logo.jpg" alt="Image 4">
+            <div class="image4">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
+        </div>
+		</div>
+			<div class="add5">
+			<div class="addimgcon5">
+            <img src="logo.jpg" alt="Image 5">
+           <div class="image5">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
+        </div>
+		</div>
+		</div>
+		
+		<div class="addimages2">
+		<div class="add6">
+		<div class="addimgcon6">
+            <img src="logo.jpg" alt="Image 6">
+           <div class="image6">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
+        </div>
+		</div>
+		</div>
+		</div>
+		<div class="mop">
+		Meet Our Professionals
+		</div>
+		
+		<div class="moppt">
+		<div class="professionals">
+		<div class="proflogo">
+		<img class="plogo" src="logo.jpg" alt="Image "></div>
+		<div class="prof1">FullName <br>09324523231<br>Email@email.com<br> </div>
+		</div>
+		
+		<div class="professionals">
+		<div class="proflogo">
+		<img class="plogo" src="logo.jpg" alt="Image "></div>
+		<div class="prof1">FullName <br>09324523231<br>Email@email.com<br> </div>
+		</div>
+		</div>
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+</body>
+</html>

@@ -1,0 +1,90 @@
+HTML (index.html):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Car Manufacturing Item Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        
+        item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Manufacturing Item Shop</h1>
+    </header>
+    <main id="item-shop">
+        <!-- Vehicles will be dynamically added here -->
+    </main>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Assuming you have a list of vehicles
+            const vehiclesData = [
+                { type: 'Car', model: 'Sedan', image: 'car_image_url' },
+                { type: 'Motorcycle', model: 'Sport Bike', image: 'motorcycle_image_url' },
+                { type: 'Scooter', model: 'Electric Scooter', image: 'scooter_image_url' },
+                { type: 'Truck', model: 'Pickup Truck', image: 'truck_image_url' },
+                // Add more vehicles as needed
+            ];
+        
+            const itemShop = document.getElementById('item-shop');
+        
+            // Dynamically generate HTML for vehicles
+            vehiclesData.forEach(vehicle => {
+                const vehicleElement = document.createElement('item');
+                vehicleElement.innerHTML = `
+                    <h2>${vehicle.type}</h2>
+                    <p>${vehicle.model}</p>
+                    <img src="${vehicle.image}" alt="${vehicle.model}">
+                `;
+                itemShop.appendChild(vehicleElement);
+            });
+        });
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+JavaScript (script.js):
+
+

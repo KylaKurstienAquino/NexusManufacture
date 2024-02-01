@@ -1,0 +1,330 @@
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.navi{
+    background-image: url(sia/whicar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 500vh;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.icon{
+    margin-left: 2%;
+}
+.topnav{
+    background-color: rgb(0, 0, 0, .75);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: calc(100% / 12 * 12);
+    height:5vh;
+
+}
+.topnav>div{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 10%;
+    width: calc(100% / 12 * 1.80);
+}
+.secnav{
+    background-color: rgb(0, 0, 0, .75);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: calc(100% / 12 * 12);
+    height: 13vh;
+    align-items: center;
+}
+.secnav>div{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 5%;
+    width: calc(100% / 12 * .95);
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background:url("sia/whicar.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h2{
+    font-size: 7rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 
+        -2px -2px 0 #000,  
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+	font-family: Charlesworth;
+}
+
+.home .content h3{
+    font-size: 2.5rem;
+    color: #ffffff;
+	text-shadow: 
+        -2px -2px 0 #000,  
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    padding:1rem 0;
+    line-height: .2;
+}
+.overview{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background:url("sia/redcar.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.overview .ov-content {
+	        flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 50rem;
+            max-height: 100rem;
+           
+        }
+        .overview .ov-content h4 {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .overview .ov-content p {
+            font-size: 2.5rem;
+            color: #000000;
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+            padding: 1rem 0;
+            line-height: 1.5;
+        }
+        
+		.overview .ov-photo-container {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+		.overview .ov-photo-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+.dreamcar{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background:url("sia/carcity.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}	
+.dreamcar .find-dc {
+	        flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 40rem;
+            max-height: 60rem;
+           
+        }
+        .dreamcar .find-dc h3 {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 8rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 
+                -3px -3px 0 #000,  
+                3px -3px 0 #000,
+                -3px 3px 0 #000,
+                3px 3px 0 #000;
+        }
+.main-container {
+            display: flex;
+			padding: 150px;
+            justify-content: flex-end;
+            align-items: stretch;
+            min-height: 60vh;
+        }
+
+        .container-wrapper {
+            display: flex;
+        }
+
+        .left-container,
+        .right-container {
+		    text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 10px; 
+        }
+
+        .budget-container,
+        .brand-container {
+            margin-top: 10px; 
+            padding: 2px;
+            background-color: #e0e0e0;
+        }
+
+        .dropdown {
+            margin-top: 10px;
+        }
+
+        select {
+            width: 100%; 
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .find-vehicle-button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+	
+.cardeals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: white;
+}
+
+.cardeals .deals {
+	font-size: 3rem;
+    max-width: 50rem;
+    max-height: 100rem;
+    text-align: center;
+	margin-bottom: -10px;
+}
+
+.cardeals .title-container {
+    display: flex;
+    margin-top: -10px;
+}
+
+.cardeals .title {
+	font-family: "Arial Narrow", Arial, sans-serif;
+	font-weight: normal;
+    margin: 0 110px; 
+}
+.cardeals .photo-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+.cardeals .photo {
+            width: 200px;
+            height: 20S0px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+			margin: 0 75px;
+        }
+.cardeals .button-container {
+            display: flex;
+            margin-top: 10px;
+        }
+.cardeals .details-button {
+            padding: 10px 30px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: black;
+            color: #fff; 
+			margin: 0 100px;
+        }
+.cardeals .title-container2 {
+    display: flex;
+    margin-top: 20px;
+}
+
+.cardeals .title2 {
+	font-family: "Arial Narrow", Arial, sans-serif;
+	font-weight: normal;
+    margin: 0 110px;
+}
+.cardeals .photo-container2 {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+.cardeals .photo2 {
+            width: 200px;
+            height: 20S0px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+			margin: 0 75px;
+        }
+.cardeals .button-container2 {
+            display: flex;
+            margin-top: 10px;
+        }
+.cardeals .details-button2 {
+            padding: 10px 30px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: black;
+            color: #fff; 
+			margin: 0 100px;
+        }
+.botnav{
+    background-color: rgb(0, 0, 0, 1);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: calc(100% / 12 * 12);
+    height:6vh;
+    margin-top: 3%;
+}
+.botnav>div{
+    margin-left: 9%;
+}
+.secbotnav{
+    background-color: rgb(0, 0, 0, 1);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: calc(100% / 12 * 12);
+    height:5vh;
+    
+}
+.secbotnav>div{
+    margin-left: 2%;
+    opacity: 50%;
+}

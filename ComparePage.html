@@ -5,25 +5,280 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexusCompare</title>
     <link rel="stylesheet" href="ComparePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<div class="topnav" style="color: white;">
-    <div><a href="#">nexusmanufacture@email.com</a></div>
-    <div><a href="#">+6392-345-6789</a></div>
-    <div><a href="#">Log In or Sign Up</a></div>
-    <div><a href="#">CART</a></div>
-</div>
-
-<div class="secnav" style="color: white;">
-    <div><a href="#">HOME</a></div>
-    <div><a href="#">NEWS</a></div>
-    <div><a href="#">CATEGORY</a></div>
-    <div><a href="#">SERVICE</a></div>
-    <div><a href="#">ITEMS</a></div>
-    <div><a href="#">ABOUT US</a></div>
-</div>
-
 <body>
+    <div class="navi">
+        <div class="topnav">
+            <div><i class="fa-solid fa-envelope" id="envelope"></i><a href="#">nexusmanufacture@email.com</a></div>
+            <div><i class="fa-solid fa-phone" id="phone"></i><a href="#">+6392-345-6789</a></div>
+            <div><i class="fa-solid fa-user" id="profileicon"></i><a href="#">Log In or Sign Up</a></div>
+            <div><i class="fa-solid fa-cart-shopping" id="carticon"></i><a href="#">Cart</a></div>
+        </div>
+        
+        <div class="secnav">
+            <img class= "icon" src="sia/nexuscon.png" alt="sampleicon" width="70" height="70">
+            <div><a href="#">HOME</a></div>
+            <div><a href="#">NEWS</a></div>
+            <div><a href="#">CATEGORY</a></div>
+            <div><a href="#">SERVICE</a></div>
+            <div><a href="#">ITEMS</a></div>
+            <div><a href="#">ABOUT US</a></div>
+            <div><input type="text" placeholder="Search.."></div> 
+            <div>
+                <i class="fa-solid fa-magnifying-glass" id="glass"></i>
+            </div>
+        </div>
+
+        <div class="compare" style="color: white;">
+            Compare
+        </div>
+    </div>
+
+    <div class="compboxes">
+        <div class="compbox1">
+
+            <div class="category1">
+                Category: 
+                <select class="comp1">
+                    <option value="0"> ---Select Category--- </option>
+                    <option value="1">Motorcycle</option>
+                    <option value="2">Car</option>
+                    <option value="3">Scooter </option>
+                    <option Value="4">Trucks</option>
+                </select>
+            </div>           
+    
+            <div class="vehicle1">
+                Vehicle: 
+                <select class=" veh1">
+                    <option value="0"> ---Select Vehicle--- </option>
+                    <option value="1">one</option>
+                    <option value="2">two</option>
+                    <option value="3">three </option>
+                    <option Value="4">truck</option>
+                </select>
+            </div>
+
+            <div class="compbtn1">
+                <button onclick="compare()">
+                    Compare</button>
+            </div>
+    
+            <div class="specs1">
+                <h1 class="specs">Specs</h1>
+                <div class="specu1">
+                    <div class="specparts1">
+                        <label id="specdet1.1">Select Category</label>
+                    </div>
+                    <div class="specinfo1">
+                        <label id="specdet1.2">Select Category</label>
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+    
+        <div class="compbox2">
+    
+            <div class="category2">
+                Category: 
+                <select class="comp2">
+                    <option value="0"> ---Select Category--- </option>
+                    <option value="1">Motorcycle</option>
+                    <option value="2">Car</option>
+                    <option value="3">Scooter </option>
+                    <option Value="4">Trucks</option>
+                </select>
+            </div>
+            
+    
+            <div class="vehicle2">
+                Vehicle: 
+                <select class=" veh2">
+                    <option value="0"> ---Select Vehicle--- </option>
+                    <option value="1">one</option>
+                    <option value="2">two</option>
+                    <option value="3">three </option>
+                    <option Value="4">truck</option>
+                </select>
+            </div>
+
+            <div class="compbtn2">
+                <button onclick="compare()">
+                    Compare</button>
+            </div>
+    
+            <div class="specs2">
+                <h1 class="specs">Specs</h1>
+                <div class="specu2">
+                    <div class="specparts2">
+                        <label id="specdet2.1">Select Category</label>
+                    </div>
+                    <div class="specinfo2">
+                        <label id="specdet2.2">Select Category</label>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    
+        <div class="compbox3">
+    
+            <div class="category3">
+                Category: 
+                <select class="comp3">
+                    <option value="0"> ---Select Category--- </option>
+                    <option value="1">Motorcycle</option>
+                    <option value="2">Car</option>
+                    <option value="3">Scooter </option>
+                    <option Value="4">Trucks</option>
+                </select>
+            </div>
+                
+            <div class="vehicle3">
+                Vehicle: 
+                <select class=" veh3">
+                    <option value="0"> ---Select Vehicle--- </option>
+                    <option value="1">one</option>
+                    <option value="2">two</option>
+                    <option value="3">three </option>
+                    <option Value="4">truck</option>
+                </select>
+            </div>
+
+            <div class="compbtn3">
+                <button onclick="compare()">
+                    Compare</button>
+            </div>
+    
+            <div class="specs3">
+                <h1 class="specs">Specs</h1>
+                <div class="specu3">
+                    <div class="specparts3">
+                        <label id="specdet3.1">Select Category</label>
+                    </div>
+                    <div class="specinfo1">
+                        <label id="specdet3.2">Select Category</label>
+                    </div>
+                </div>
+               
+            </div>
+    
+        </div>
+    
+        <div class="compbox4">
+    
+            <div class="category4">
+                Category: 
+                <select class="comp4">
+                    <option value="0"> ---Select Category--- </option>
+                    <option value="1">Motorcycle</option>
+                    <option value="2">Car</option>
+                    <option value="3">Scooter </option>
+                    <option Value="4">Trucks</option>
+                </select>
+            </div>
+               
+            <div class="vehicle4">
+                Vehicle: 
+                <select class=" veh4">
+                    <option value="0"> ---Select Vehicle--- </option>
+                    <option value="1">one</option>
+                    <option value="2">two</option>
+                    <option value="3">three </option>
+                    <option Value="4">truck</option>
+                </select>
+            </div>
+
+            <div class="compbtn4">
+                <button onclick="compare()">
+                    Compare</button>
+            </div>
+    
+            <div class="specs4">
+                <h1 class="specs">Specs</h1>
+                <div class="specu4">
+                    <div class="specparts4">
+                        <label id="specdet4.1">Select Category</label>
+                    </div>
+                    <div class="specinfo1">
+                        <label id="specdet4.2">Select Category</label>
+                    </div>
+                </div>
+               
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="fincalc">
+    Finance Calculator
+    <div class="calcu">
+        <div><label for="veccat">Category: </label>
+            <select class="vecate" id="veccat">
+                <option value="0"> </option>
+                <option value="1">Motorcycle</option>
+                <option value="2">Car</option>
+                <option value="3">Scooter </option>
+                <option Value="4">Trucks</option>
+            </select>
+        </div>
+        <div><label for="vectype">Vehicle: </label>
+            <select class="vetype" id="vectype">
+                <option value="0"> </option>
+                <option value="1">option1</option>
+                <option value="2">option2</option>
+                <option value="3">option3 </option>
+                <option Value="4">option4</option>
+            </select>
+            <input type="text" id="val" name="valu" readonly>
+        </div>
+        <div><label for="dpay">Downpayment: </label>
+            <select class="payd" id="dpay">
+                <option value="0"> </option>
+                <option value="1">20%</option>
+                <option value="2">30%</option>
+                <option value="3">40%</option>
+                <option Value="4">50%</option>
+            </select>
+        </div>
+        <div><label for="tol">Terms of Loan: </label>
+            <select class="terol" id="tol">
+                <option value="0"> </option>
+                <option value="1">12 months</option>
+                <option value="2">24 months</option>
+                <option value="3">36 months</option>
+                <option Value="4">48 months</option>
+            </select>
+        </div>
+        <div><label for="res">Result: </label> <input type="int" id="res" name="resu" readonly> </div>
+
+        <div><button onclick="calculate()">CALCULATE</button></div>
+    </div>
+    </div>
+
+    <div class="botnav">
+        <div><a href="#">About Us</a></div>
+        <div><a href="#">Overview</a></div>
+        <div><a href="#">Contact Us</a></div>
+        <div><a href="#">Career</a></div>
+        <div><a href="#">Privacy Policy</a></div>
+        <div><a href="#">Terms and Conditions</a></div>
+    </div>
+
+    <div class="secbotnav">
+        <div><a href="#">Copyright © 2023 NexusManufacture. All Rights Reserve</a></div>
+        <i class="fa-brands fa-facebook" id="facebook"></i>
+        <i class="fa-brands fa-instagram" id="instagram"></i>
+        <i class="fa-brands fa-youtube" id="youtube"></i>
+        <i class="fa-brands fa-pinterest" id="pinterest"></i>
+
+
+    </div>
+
     
 </body>
 </html>

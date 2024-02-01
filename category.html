@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="MANUFACTURE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Parts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ddd;
+            padding: 10px;
+        }
+
+        .category-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .category-section h2 {
+            color: #333;
+        }
+
+        .category-container {
+            display: flex-form;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            width: 200px;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .category:hover {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Automotive Parts</h1>
+    </header>
+
+    <nav>
+        <button onclick="scrollToCategory('MOTORCYCLE')">Motorcycle Parts</button>
+        <button onclick="scrollToCategory('CAR')">Car Parts</button>
+        <button onclick="scrollToCategory('SCOOTER')">Scooter Parts</button>
+        <button onclick="scrollToCategory('TRUCK')">Truck Parts</button>
+    </nav>
+
+    <div id="MOTORCYCLE" class="category-section">
+        <h2>Motorcycle Parts</h2>
+        <div class="category-container">
+            <!-- Motorcycle parts content goes here -->
+            <div class="category">Motorcycle Part 1</div>
+            <div class="category">Motorcycle Part 2</div>
+            <div class="category">Motorcycle Part 3</div>
+            <!-- Add more motorcycle parts as needed -->
+        </div>
+    </div>
+
+    <div id="CAR" class="category-section">
+        <h2>Car Parts</h2>
+        <div class="category-container">
+            <!-- Car parts content goes here -->
+            <div class="category">Car Part 1</div>
+            <div class="category">Car Part 2</div>
+            <div class="category">Car Part 3</div>
+            <!-- Add more car parts as needed -->
+        </div>
+    </div>
+
+    <div id="SCOOTER" class="category-section">
+        <h2>Scooter Parts</h2>
+        <div class="category-container">
+            <!-- Scooter parts content goes here -->
+            <div class="category">Scooter Part 1</div>
+            <div class="category">Scooter Part 2</div>
+            <div class="category">Scooter Part 3</div>
+            <!-- Add more scooter parts as needed -->
+        </div>
+    </div>
+
+    <div id="TRUCK" class="category-section">
+        <h2>Truck Parts</h2>
+        <div class="category-container">
+            <!-- Truck parts content goes here -->
+            <div class="category">Truck Part 1</div>
+            <div class="category">Truck Part 2</div>
+            <div class="category">Truck Part 3</div>
+            <!-- Add more truck parts as needed -->
+        </div>
+    </div>
+
+    <script>
+        function scrollToCategory(category) {
+            const categoryElement = document.getElementById(category);
+            if (categoryElement) {
+                categoryElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
+</body>
+</html>
