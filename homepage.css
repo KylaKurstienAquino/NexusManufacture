@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -328,3 +329,675 @@ a{
     margin-left: 2%;
     opacity: 50%;
 }
+=======
+		*{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+		.navi{
+            background-image: url(whicar.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-height: 500vh;
+            color: white;
+}
+	
+a{
+            text-decoration: none;
+            color: white;
+}
+		.icon{
+            margin-left: 2%;
+}
+
+/* Top Navigation */
+
+		.topnav{
+            background-color: rgb(0, 0, 0, .75);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height:5vh;
+
+}
+		.topnav>div{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-left: 10%;
+            width: calc(100% / 12 * 1.80);
+}
+		.secnav{
+            background-color: rgb(0, 0, 0, .75);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height: 13vh;
+            align-items: center;
+}
+		.secnav>div{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-left: 5%;
+            width: calc(100% / 12 * .95);
+}
+
+/* Home page */
+
+		.home{
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background:url("whicar.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+
+}
+
+		.home .content{
+            max-width: 50rem;
+}
+
+		.home .content h2{
+            font-size: 7rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 
+            -2px -2px 0 #000,  
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
+            font-family: Charlesworth;
+}
+
+		.home .content h3{
+            font-size: 2.5rem;
+            color: #ffffff;
+            text-shadow: 
+            -2px -2px 0 #000,  
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
+            padding:1rem 0;
+            line-height: .2;
+}
+
+/* Overview page */
+
+		.overview{
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background:url("overviewbg.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+
+}
+		.overview .ov-content {
+	        flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 50rem;
+            max-height: 100rem;
+           
+        }
+        .overview .ov-content h4 {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .overview .ov-content p {
+            font-size: 2.5rem;
+            color: #000000;
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+            padding: 1rem 0;
+            line-height: 1.5;
+        }
+        
+		.overview .ov-photo-container {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+		.overview .ov-photo-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+		
+/* Find your dream car page */
+
+.dreamcar{
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background:url("carcity.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+
+}	
+.dreamcar .find-dc {
+	        flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 50rem;
+            max-height: 60rem;
+           
+        }
+        .dreamcar .find-dc h3 {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 8rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 
+                -3px -3px 0 #000,  
+                3px -3px 0 #000,
+                -3px 3px 0 #000,
+                3px 3px 0 #000;
+        }
+		
+/* Dream Car Container */
+
+ 		.main-container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #ccc;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .toggle-button {
+            flex: 1;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            padding: 30px;
+            cursor: pointer;
+        }
+
+        .toggle-button.used {
+            background-color: #000000;
+            color: white;
+        }
+        .toggle-option-button {
+            flex: 1;
+            margin: 0 5px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .toggle-option-button.active {
+            background-color: #000000;
+            color: white;
+        }
+        .option-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+			height: 20%;
+        }
+
+        .left-container-options,
+        .right-container-options {
+            width: 100%;
+            margin-bottom: 10px;
+			margin-top: 10px;
+        }
+
+        .find-vehicle-button {
+            width: 100%;
+            margin-top: 10px;
+            background-color: #000000;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .by-brand-options-used,
+        .by-budget-options-used,
+        .by-brand-options-new,
+        .by-budget-options-new {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .by-brand-options-used label,
+        .by-budget-options-used label,
+        .by-brand-options-new label,
+        .by-budget-options-new label {
+            margin-bottom: 5px;
+        }
+
+        .by-brand-options-used select,
+        .by-budget-options-used select,
+        .by-brand-options-new select,
+        .by-budget-options-new select {
+            width: 100%;
+            margin-bottom: 10px;
+			margin-top: 10px;
+			height: 3em;
+        }
+
+        .by-city-options-used,
+        .by-category-options-used,
+        .by-city-options-new,
+        .by-category-options-new {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .by-city-options-used select,
+        .by-category-options-used select,
+        .by-city-options-new select,
+        .by-category-options-new select {
+            width: 100%;
+			margin-bottom: 10px;
+        }
+		
+/* Best Car Deals page */
+		
+		.cardeals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 110vh;
+    background-color: white;
+}
+
+.cardeals .deals {
+    font-size: 3rem;
+    max-width: 50rem;
+    max-height: 100rem;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.cardeals .title-container {
+    display: flex;
+    margin-top: -10px;
+}
+
+.cardeals .title {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-weight: normal;
+    margin: 0 110px;
+}
+
+.cardeals .photo-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cardeals .photo {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin: 0 75px;
+}
+
+.cardeals .button-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.cardeals .details-button {
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: #fff;
+    margin: 0 100px;
+}
+
+.cardeals .title-container2 {
+    display: flex;
+    margin-top: 20px;
+}
+
+.cardeals .title2 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-weight: normal;
+    margin: 0 110px;
+}
+
+.cardeals .photo-container2 {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.cardeals .photo2 {
+    width: 200px;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin: 0 75px;
+}
+
+.cardeals .button-container2 {
+    display: flex;
+    margin-top: 10px;
+}
+
+.cardeals .details-button2 {
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: #fff;
+    margin: 0 100px;
+}
+
+.details-container {
+    position: absolute;
+    background-color: white;
+    background-image: url('nexuscon.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border: 3px solid #000;
+    display: none;
+    margin-top: 20em;
+}
+
+.details-container.show {
+    display: block;
+}
+.cardeals .details-container.show {
+    margin-top: 15em; 
+}
+.cardeals .add-to-cart-button,
+.cardeals .add-to-favorites-button {
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 50px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+	background-color: black;
+    color: #fff;
+}
+
+.cardeals .close-button {
+	display: inline-block;
+    margin: 10px 5px;
+    padding: 8px 18px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cardeals .close-button {
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* LogIn or SignUp */
+
+ 		body.modal-open {
+            overflow: hidden;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 18%; 
+            height: 80%;
+            overflow-y: auto; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .big-icon-container {
+            margin-top: 10px; 
+        }
+
+        .big-icon {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        
+		.big-icon img {
+            width: 100px;
+            height: auto; 
+            filter: invert(100%);
+        }
+
+        .title-container {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .title-big {
+            font-size: 2em; 
+            font-weight: bold;
+            color: #333; 
+        }
+
+        .title-small {
+            font-size: .7em; 
+            color: #555; 
+        }
+
+        .tagline {
+			margin-top: 10px; 
+            font-size: 0.7em;
+            color: #555;
+        }
+		
+/* LogIn Form */
+
+            .username-label {
+			display: block;
+			margin-bottom: 5px;
+			margin-top: 80px;
+        }
+
+        .username-field {
+			width: 90%; 
+			padding: 5px;
+			font-size: 1em
+        }
+
+
+        .password-label {
+			display: left;
+			margin-bottom: 5px;
+			margin-top: 10px;
+			margin-left: 5px;
+			margin-right: 5px;
+        }
+
+        .password-field {
+			width: 90%;
+			padding: 5px;
+			font-size: 1em;
+        }
+
+        .login-field button {
+			width: 100%;
+			margin-top: 10px;
+            padding: .5rem; 
+            font-size: 1em; 
+            cursor: pointer;
+			background-color: black;
+            color: white;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+		
+		.signup-link {
+            margin-top: 15px;
+            font-size: 1em;
+            color: #007bff; 
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+/* Signup Form */
+
+		#signupModal .modal-content {
+            width: 25%;
+            height: 55%;
+		}
+
+		#signupModal .title {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 40px;
+		}
+
+		#signupModal .input-container {
+            position: relative;
+            margin-bottom: -5px;
+            width: 90%; 
+            padding: 10px;
+            font-size: 1em;
+		}
+
+		#signupModal label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: .9em;
+            pointer-events: none; 
+		}
+
+		#signupModal input {
+            width: 100%;
+            font-size: 1em;
+		}
+
+		#signupModal input:focus + label {
+            display: none; 
+        }
+
+		#signupModal button {
+            width: 50%;
+            margin-top: 20px;
+            padding: 1rem;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+		}
+
+		.signin-link {
+            margin-top: 15px;
+            font-size: 1em;
+            color: #007bff; 
+            cursor: pointer;
+            text-decoration: underline;
+        }
+		
+		
+.alert {
+        padding: 7px;
+        background-color: #f44336;
+        color: white;
+        margin-bottom: 10px;
+		margin-top: 10px;
+		font-size: 1em;
+    }
+
+    .success {
+        background-color: #4CAF50;
+    }
+/* Bottom Navigation */	
+		
+		.botnav{
+            background-color: rgb(0, 0, 0, 1);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height:6vh;
+            margin-top: 3%;
+		}
+		.botnav>div{
+            margin-left: 9%;
+		}
+		.secbotnav{
+            background-color: rgb(0, 0, 0, 1);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height:5vh;
+    
+		}
+		.secbotnav>div{
+    margin-left: 2%;
+    opacity: 50%;
+		}
+>>>>>>> 5d019e90d82b8b4f06a809ec129c2792c346a417
