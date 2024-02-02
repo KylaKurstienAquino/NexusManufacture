@@ -4,21 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Car Manufacturing</title>
+    <title>NexusContact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        *{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 0%;
+            margin: 0%;
         }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
+        .navi{
+            background-image: url("sia/telep.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-height: 500vh;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .icon{
+            margin-left: 4%;
+        }
+        .topnav{
+            background-color: rgb(0, 0, 0, .75);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height:5vh;
+        
+        }
+        .topnav>div{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-left: 10%;
+            width: calc(100% / 12 * 1.75);
+        }
+        .secnav{
+            background-color: rgb(0, 0, 0, .75);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height: 10vh;
+            align-items: center;
+        
+        }
+        .secnav>div{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-left: 5%;
+            width: calc(100% / 12 * .75);
+        }
+        .contactus{
             text-align: center;
+            font-size: 20vh;
+            padding: 5%;
         }
-
         main {
             max-width: 800px;
             margin: 20px auto;
@@ -58,12 +103,110 @@
         button:hover {
             background-color: #555;
         }
+        .botnav{
+            background-color: rgb(0, 0, 0, 1);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height:6vh;
+            margin-top: 3%;
+        }
+        .botnav>div{
+            margin-left: 9%;
+        }
+        .secbotnav{
+            background-color: rgb(0, 0, 0, 1);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height:5vh;
+            
+        }
+        .secbotnav>div{
+            margin-left: 2%;
+            opacity: 50%;
+        }
+        
+        #facebook {
+            color: white;
+            margin-left: 50%;
+            opacity: 50%;
+        }
+        
+        #instagram{
+            color: white;
+            margin-left: 2%;
+            opacity: 50%;
+        }
+        
+        #youtube{
+            color: white;
+            margin-left: 2%;
+            opacity: 50%;
+        }
+        
+        #pinterest{
+            color: white;
+            margin-left: 2%;
+            opacity: 50%;
+        }
+        
+        #carticon{
+            color: white;
+            margin-right: 2%;
+        }
+        
+        #profileicon{
+            color: white;
+            margin-right: 2%;
+        }
+        
+        #envelope{
+            color: white;
+            margin-left: -25%;
+            margin-right: 2%;
+        }
+        
+        #phone{
+            color: white;
+            margin-right: 2%;
+        }
+        
+        #glass{
+            color: white;
+            margin-left: 5%;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-    </header>
+    <div class="navi">
+        <div class="topnav">
+            <div><i class="fa-solid fa-envelope" id="envelope"></i><a href="#">nexusmanufacture@email.com</a></div>
+            <div><i class="fa-solid fa-phone" id="phone"></i><a href="#">+6392-345-6789</a></div>
+            <div><i class="fa-solid fa-user" id="profileicon"></i><a href="#">Log In or Sign Up</a></div>
+            <div><i class="fa-solid fa-cart-shopping" id="carticon"></i><a href="#">Cart</a></div>
+        </div>
+        
+        <div class="secnav">
+            <img class= "icon" src="sia/nexuscon.png" alt="sampleicon" width="70" height="70">
+            <div><a href="homepage.html">HOME</a></div>
+            <div><a href="news_page.html">NEWS</a></div>
+            <div><a href="category.html">CATEGORY</a></div>
+            <div><a href="#">SERVICE</a></div>
+            <div><a href="item_shop.html">ITEMS</a></div>
+            <div><a href="AboutUs.html">ABOUT US</a></div>
+            <div><input type="text" placeholder="Search.."></div> 
+            <div>
+                <i class="fa-solid fa-magnifying-glass" id="glass"></i>
+            </div>
+        </div>
+
+        <div class="contactus" style="color: white;">
+            Contact Us
+        </div>
+    </div>
     <main>
         <div id="contact-form">
             <form id="contact-us-form">
@@ -83,6 +226,22 @@
             </form>
         </div>
     </main>
+    <div class="botnav">
+        <div><a href="#">About Us</a></div>
+        <div><a href="#">Overview</a></div>
+        <div><a href="#">Contact Us</a></div>
+        <div><a href="#">Career</a></div>
+        <div><a href="#">Privacy Policy</a></div>
+        <div><a href="#">Terms and Conditions</a></div>
+    </div>
+
+    <div class="secbotnav">
+        <div><a href="#">Copyright © 2023 NexusManufacture. All Rights Reserve</a></div>
+        <i class="fa-brands fa-facebook" id="facebook"></i>
+        <i class="fa-brands fa-instagram" id="instagram"></i>
+        <i class="fa-brands fa-youtube" id="youtube"></i>
+        <i class="fa-brands fa-pinterest" id="pinterest"></i>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const contactForm = document.getElementById('contact-us-form');
