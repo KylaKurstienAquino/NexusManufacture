@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-HTML (index.html):
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +6,42 @@ HTML (index.html):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Car Manufacturing News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        
+        article {
+            border-bottom: 1px solid #ccc;
+            padding: 1em 0;
+        }
+        
+        article:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            color: #333;
+        }
+        
+        p {
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,187 +50,41 @@ HTML (index.html):
     <main id="news-list">
         <!-- News articles will be dynamically added here -->
     </main>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Assuming you have a list of news articles
+            const newsData = [
+                { title: 'Exciting New Model Release', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                { title: 'Green Initiative Announcement', content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
+                // Add more news articles as needed
+            ];
+        
+            const newsList = document.getElementById('news-list');
+        
+            // Dynamically generate HTML for news articles
+            newsData.forEach(article => {
+                const articleElement = document.createElement('article');
+                articleElement.innerHTML = `
+                    <h2>${article.title}</h2>
+                    <p>${article.content}</p>
+                `;
+                newsList.appendChild(articleElement);
+            });
+        });
+        //Backend (server.js using Node.js and Express):
+        
+        const express = require('express');
+        const app = express();
+        const port = 3000;
+        
+        // Serve static files (HTML, CSS, JS)
+        app.use(express.static('public'));
+        
+        app.listen(port, () => {
+            console.log(`Server is running at http://localhost:${port}`);
+        });
+        
+    </script>
 </body>
 </html>
 
-
-
-
-CSS (styles.css):
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
-
-main {
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-article {
-    border-bottom: 1px solid #ccc;
-    padding: 1em 0;
-}
-
-article:last-child {
-    border-bottom: none;
-}
-
-h2 {
-    color: #333;
-}
-
-p {
-    color: #666;
-}
-
-
-JavaScript (script.js):
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Assuming you have a list of news articles
-    const newsData = [
-        { title: 'Exciting New Model Release', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-        { title: 'Green Initiative Announcement', content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-        // Add more news articles as needed
-    ];
-
-    const newsList = document.getElementById('news-list');
-
-    // Dynamically generate HTML for news articles
-    newsData.forEach(article => {
-        const articleElement = document.createElement('article');
-        articleElement.innerHTML = `
-            <h2>${article.title}</h2>
-            <p>${article.content}</p>
-        `;
-        newsList.appendChild(articleElement);
-    });
-});
-
-
-
-Backend (server.js using Node.js and Express):
-
-const express = require('express');
-const app = express();
-const port = 3000;
-
-// Serve static files (HTML, CSS, JS)
-app.use(express.static('public'));
-
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
-=======
-HTML (index.html):
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Car Manufacturing News</title>
-</head>
-<body>
-    <header>
-        <h1>Car Manufacturing News</h1>
-    </header>
-    <main id="news-list">
-        <!-- News articles will be dynamically added here -->
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
-
-
-
-
-CSS (styles.css):
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
-
-main {
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-article {
-    border-bottom: 1px solid #ccc;
-    padding: 1em 0;
-}
-
-article:last-child {
-    border-bottom: none;
-}
-
-h2 {
-    color: #333;
-}
-
-p {
-    color: #666;
-}
-
-
-JavaScript (script.js):
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Assuming you have a list of news articles
-    const newsData = [
-        { title: 'Exciting New Model Release', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-        { title: 'Green Initiative Announcement', content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-        // Add more news articles as needed
-    ];
-
-    const newsList = document.getElementById('news-list');
-
-    // Dynamically generate HTML for news articles
-    newsData.forEach(article => {
-        const articleElement = document.createElement('article');
-        articleElement.innerHTML = `
-            <h2>${article.title}</h2>
-            <p>${article.content}</p>
-        `;
-        newsList.appendChild(articleElement);
-    });
-});
-
-
-
-Backend (server.js using Node.js and Express):
-
-const express = require('express');
-const app = express();
-const port = 3000;
-
-// Serve static files (HTML, CSS, JS)
-app.use(express.static('public'));
-
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
->>>>>>> 5d019e90d82b8b4f06a809ec129c2792c346a417
