@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>NexusAbout</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
 	*{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -22,7 +23,7 @@
 		}
 
 			.navi{
-				background-image: url("hd.jpg");
+				background-image: url("sia/buy.jpg");
 				background-repeat: no-repeat;
 				background-size: cover;
 				max-height: 500vh;
@@ -35,39 +36,39 @@
 			.icon{
 				margin-left: 4%;
 			}
-		.topnav{
-			background-color: rgb(0, 0, 0, .75);
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			width: calc(100% / 12 * 12);
-			height:5vh;
-
-		}
-		.topnav>div{
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			margin-left: 10%;
-			width: calc(100% / 12 * 1.5);
-		}
-		.secnav{
-			background-color: rgb(0, 0, 0, .75);
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			width: calc(100% / 12 * 12);
-			height: 10vh;
-			align-items: center;
-
-		}
-		.secnav>div{
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			margin-left: 5%;
-			width: calc(100% / 12 * .75);
-		}
+			.topnav{
+				background-color: rgb(0, 0, 0, .75);
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+				width: calc(100% / 12 * 12);
+				height:5vh;
+			
+			}
+			.topnav>div{
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+				margin-left: 10%;
+				width: calc(100% / 12 * 1.75);
+			}
+			.secnav{
+				background-color: rgb(0, 0, 0, .75);
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+				width: calc(100% / 12 * 12);
+				height: 10vh;
+				align-items: center;
+			
+			}
+			.secnav>div{
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+				margin-left: 5%;
+				width: calc(100% / 12 * .75);
+			}
 		.aboutus{
 			text-align: center;
 			font-size: 20vh;
@@ -273,7 +274,55 @@
 			margin-left: 2%;
 			opacity: 50%;
 		}
+		#facebook {
+			color: white;
+			margin-left: 50%;
+			opacity: 50%;
+		}
 		
+		#instagram{
+			color: white;
+			margin-left: 2%;
+			opacity: 50%;
+		}
+		
+		#youtube{
+			color: white;
+			margin-left: 2%;
+			opacity: 50%;
+		}
+		
+		#pinterest{
+			color: white;
+			margin-left: 2%;
+			opacity: 50%;
+		}
+		
+		#carticon{
+			color: white;
+			margin-right: 2%;
+		}
+		
+		#profileicon{
+			color: white;
+			margin-right: 2%;
+		}
+		
+		#envelope{
+			color: white;
+			margin-left: -25%;
+			margin-right: 2%;
+		}
+		
+		#phone{
+			color: white;
+			margin-right: 2%;
+		}
+		
+		#glass{
+			color: white;
+			margin-left: 5%;
+		}
 		
 		
 		
@@ -281,17 +330,16 @@
 </head>
 <body>
 
-
  <div class="navi">
         <div class="topnav">
-            <div><a href="#">nexusmanufacture@email.com</a></div>
-            <div><a href="#">+6392-345-6789</a></div>
-            <div><a href="#">Log In or Sign Up</a></div>
-            <div><a href="#">CART</a></div>
+            <div><i class="fa-solid fa-envelope" id="envelope"></i><a href="#">nexusmanufacture@email.com</a></div>
+            <div><i class="fa-solid fa-phone" id="phone"></i><a href="#">+6392-345-6789</a></div>
+            <div><i class="fa-solid fa-user" id="profileicon"></i><a href="#">Log In or Sign Up</a></div>
+            <div><i class="fa-solid fa-cart-shopping" id="carticon"></i><a href="#">Cart</a></div>
         </div>
         
         <div class="secnav">
-            <img class= "icon" src="logo.jpg" alt="sampleicon" width="90" height="50">
+            <img class= "icon" src="sia/nexuscon.png" alt="sampleicon" width="70" height="70">
             <div><a href="#">HOME</a></div>
             <div><a href="#">NEWS</a></div>
             <div><a href="#">CATEGORY</a></div>
@@ -299,6 +347,9 @@
             <div><a href="#">ITEMS</a></div>
             <div><a href="#">ABOUT US</a></div>
             <div><input type="text" placeholder="Search.."></div>
+			<div>
+                <i class="fa-solid fa-magnifying-glass" id="glass"></i>
+            </div>
         </div>
 		  <div class="aboutus" style="color: black;">
             ABOUT US
@@ -310,9 +361,7 @@
  <div class="wcu">
  Why Choose Us?
  </div>
- 
- 
-        <div class="description">
+   <div class="description">
 			<div class="wwh">
 			 What We Have !
 			 </div>
@@ -321,17 +370,17 @@
 
         <div class="images">
             <div class="image1">
-                <img src="c.jpg" alt="Image 1">
+                <img src="sia/sampleicon.png" alt="Image 1">
                 <div class="image">Description for Image 1</div>
             </div>
 
             <div class="image2">
-                <img src="c.jpg" alt="Image 2">
+                <img src="sia/sampleicon.png" alt="Image 2">
                 <div class="image">Description for Image 2</div>
             </div>
 
             <div class="image3">
-                <img src="c.jpg" alt="Image 3">
+                <img src="sia/sampleicon.png" alt="Image 3">
                 <div class="image">Description for Image 3</div>
             </div>
         </div>
@@ -340,13 +389,13 @@
     <div class="addimages">
 	<div class="add4">
         <div class="addimgcon4">
-            <img src="logo.jpg" alt="Image 4">
+            <img src="sia/nexuscon.png" alt="Image 4">
             <div class="image4">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
         </div>
 		</div>
 			<div class="add5">
 			<div class="addimgcon5">
-            <img src="logo.jpg" alt="Image 5">
+            <img src="sia/nexuscon.png" alt="Image 5">
            <div class="image5">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
         </div>
 		</div>
@@ -355,7 +404,7 @@
 		<div class="addimages2">
 		<div class="add6">
 		<div class="addimgcon6">
-            <img src="logo.jpg" alt="Image 6">
+            <img src="sia/nexuscon.png" alt="Image 6">
            <div class="image6">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
         </div>
 		</div>
@@ -369,14 +418,14 @@
     <div class="professionals">
         <div class="prof1">
             <div class="proflogo">
-                <img class="plogo" src="logo.jpg" alt="Image ">
+                <img class="plogo" src="sia/nexuscon.png" alt="Image ">
             </div>
             <div>FullName <br>09324523231<br>Email@email.com<br></div>
         </div>
 
         <div class="prof2">
             <div class="proflogo">
-                <img class="plogo" src="logo.jpg" alt="Image ">
+                <img class="plogo" src="sia/nexuscon.png" alt="Image ">
             </div>
             <div>FullName <br>09324523231<br>Email@email.com<br></div>
         </div>
@@ -394,6 +443,10 @@
 
     <div class="secbotnav">
         <div><a href="#">Copyright © 2023 NexusManufacture. All Rights Reserve</a></div>
+        <i class="fa-brands fa-facebook" id="facebook"></i>
+        <i class="fa-brands fa-instagram" id="instagram"></i>
+        <i class="fa-brands fa-youtube" id="youtube"></i>
+        <i class="fa-brands fa-pinterest" id="pinterest"></i>
     </div>
 		
 		

@@ -3,26 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automotive Parts</title>
+    <title>NexusCategory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        *{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 0%;
+            margin: 0%;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+        .vehinav {
+            display: flex;
+            background-color: black;
+            margin-top: 2%;
+            height: 5vh;
+            align-items: center ;
+            width: calc(100% / 12 * 12);
+            justify-content: center;
 
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
         }
 
-        nav {
+        .vehinav a {
+            width: calc(100%/ 12 * 5);
+            margin: 10%;
+        }
+        label[for="categ"] {
+            font-size: 50px;
+            color: white;
+            position: relative;
+            -webkit-text-stroke: 2px black;
+
+        }
+
+        .navi{
+            background-image: url("sia/blckwht.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-height: 500vh;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .icon{
+            margin-left: 4%;
+        }
+        .topnav{
+            background-color: rgb(0, 0, 0, .75);
             display: flex;
-            justify-content: space-around;
-            background-color: #ddd;
-            padding: 10px;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height:5vh;
+        
+        }
+        .topnav>div{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-left: 10%;
+            width: calc(100% / 12 * 1.75);
+        }
+        .secnav{
+            background-color: rgb(0, 0, 0, .75);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height: 10vh;
+            align-items: center;
+        
+        }
+        .secnav>div{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-left: 5%;
+            width: calc(100% / 12 * .75);
         }
 
         .category-section {
@@ -53,20 +115,117 @@
         .category:hover {
             background-color: #f9f9f9;
         }
+
+        .botnav{
+            background-color: rgb(0, 0, 0, 1);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height:6vh;
+            margin-top: 3%;
+        }
+        .botnav>div{
+            margin-left: 9%;
+        }
+        .secbotnav{
+            background-color: rgb(0, 0, 0, 1);
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            width: calc(100% / 12 * 12);
+            height:5vh;
+            
+        }
+        .secbotnav>div{
+            margin-left: 2%;
+            opacity: 50%;
+        }
+        
+        #facebook {
+            color: white;
+            margin-left: 50%;
+            opacity: 50%;
+        }
+        
+        #instagram{
+            color: white;
+            margin-left: 2%;
+            opacity: 50%;
+        }
+        
+        #youtube{
+            color: white;
+            margin-left: 2%;
+            opacity: 50%;
+        }
+        
+        #pinterest{
+            color: white;
+            margin-left: 2%;
+            opacity: 50%;
+        }
+        
+        #carticon{
+            color: white;
+            margin-right: 2%;
+        }
+        
+        #profileicon{
+            color: white;
+            margin-right: 2%;
+        }
+        
+        #envelope{
+            color: white;
+            margin-left: -25%;
+            margin-right: 2%;
+        }
+        
+        #phone{
+            color: white;
+            margin-right: 2%;
+        }
+        
+        #glass{
+            color: white;
+            margin-left: 5%;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Automotive Parts</h1>
-    </header>
+    <div class="navi">
+        <div class="topnav">
+            <div><i class="fa-solid fa-envelope" id="envelope"></i><a href="#">nexusmanufacture@email.com</a></div>
+            <div><i class="fa-solid fa-phone" id="phone"></i><a href="#">+6392-345-6789</a></div>
+            <div><i class="fa-solid fa-user" id="profileicon"></i><a href="#">Log In or Sign Up</a></div>
+            <div><i class="fa-solid fa-cart-shopping" id="carticon"></i><a href="#">Cart</a></div>
+        </div>
+        
+        <div class="secnav">
+            <img class= "icon" src="sia/nexuscon.png" alt="sampleicon" width="70" height="70">
+            <div><a href="homepage.html">HOME</a></div>
+            <div><a href="#">NEWS</a></div>
+            <div><a href="#">CATEGORY</a></div>
+            <div><a href="#">SERVICE</a></div>
+            <div><a href="#">ITEMS</a></div>
+            <div><a href="#">ABOUT US</a></div>
+            <div><input type="text" placeholder="Search.."></div> 
+            <div>
+                <i class="fa-solid fa-magnifying-glass" id="glass"></i>
+            </div>
+        </div>
 
-    <nav>
-        <button onclick="scrollToCategory('MOTORCYCLE')">Motorcycle Parts</button>
-        <button onclick="scrollToCategory('CAR')">Car Parts</button>
-        <button onclick="scrollToCategory('SCOOTER')">Scooter Parts</button>
-        <button onclick="scrollToCategory('TRUCK')">Truck Parts</button>
-    </nav>
+    </div>
+
+    <div class="vehinav">
+        <a onclick="scrollToCategory('MOTORCYCLE')"><i class="fa-solid fa-motorcycle fa-2x" style="color: white;"></i></a>
+        <a onclick="scrollToCategory('CAR')"><i class="fa-solid fa-car-side fa-2x" style="color: white;"></i></a>
+        <div class="catego"><label for="categ">CATEGORY</label> </div>
+        <a onclick="scrollToCategory('SCOOTER')"><i class="fa-solid fa-bicycle fa-2x" style="color: white;"></i></a>
+        <a onclick="scrollToCategory('TRUCK')"><i class="fa-solid fa-truck fa-2x" style="color: white;"></i></a>
+    </div>
 
     <div id="MOTORCYCLE" class="category-section">
         <h2>Motorcycle Parts</h2>
@@ -110,6 +269,23 @@
             <div class="category">Truck Part 3</div>
             <!-- Add more truck parts as needed -->
         </div>
+    </div>
+
+    <div class="botnav">
+        <div><a href="#">About Us</a></div>
+        <div><a href="#">Overview</a></div>
+        <div><a href="#">Contact Us</a></div>
+        <div><a href="#">Career</a></div>
+        <div><a href="#">Privacy Policy</a></div>
+        <div><a href="#">Terms and Conditions</a></div>
+    </div>
+
+    <div class="secbotnav">
+        <div><a href="#">Copyright © 2023 NexusManufacture. All Rights Reserve</a></div>
+        <i class="fa-brands fa-facebook" id="facebook"></i>
+        <i class="fa-brands fa-instagram" id="instagram"></i>
+        <i class="fa-brands fa-youtube" id="youtube"></i>
+        <i class="fa-brands fa-pinterest" id="pinterest"></i>
     </div>
 
     <script>
