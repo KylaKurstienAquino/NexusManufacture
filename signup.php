@@ -15,26 +15,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows > 0) {
         // Email is already taken
-        echo "Email already exists. Please choose another.";
+        echo "email_taken";
     } else {
         // Continue with registration
-        $insertUserQuery = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-        $insertUserQuery->bind_param("sss", $signupUsername, $signupEmail, $userEnteredPassword);
+        if ($signupEmail !== '') {
+            // If email is not blank, proceed
+            $insertUserQuery = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+            $insertUserQuery->bind_param("sss", $signupUsername, $signupEmail, $userEnteredPassword);
 
-        if ($insertUserQuery->execute()) {
-            // Registration successful
-            echo "success";
+            if ($insertUserQuery->execute()) {
+                // Registration successful
+                echo "success";
+            } else {
+                // Registration failed
+                echo "Error in registration process: " . $conn->error;
+            }
+
+            // Close the prepared statement for user registration
+            $insertUserQuery->close();
         } else {
-            // Registration failed
-            echo "Error in registration process.";
+            // Email cannot be blank
+            echo "email_blank";
         }
-
-        // Close the prepared statement for user registration
-        $insertUserQuery->close();
     }
 
     // Close the prepared statement for email check
     $checkEmailQuery->close();
+} else {
+    // Handle invalid request method
+    echo "Invalid request method";
 }
 
 // Close the database connection

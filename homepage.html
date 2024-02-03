@@ -549,49 +549,69 @@ function login() {
 }
 
 
+// Add this function if not present
+function displayAlert(message, containerId, success = false) {
+    const alertContainer = document.getElementById(containerId);
+    const alertClass = success ? 'alert-success' : 'alert-danger';
 
-function register() {
-        const signupUsername = document.getElementById('signupUsername').value;
-        const signupEmail = document.getElementById('signupEmail').value;
-        const signupPassword = document.getElementById('signupPassword').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
+    const alert = document.createElement('div');
+    alert.className = `alert ${alertClass}`;
+    alert.textContent = message;
 
-        const isUsernameEmpty = !signupUsername.trim();
-        const isEmailEmpty = !signupEmail.trim();
-        const isPasswordEmpty = !signupPassword.trim();
-        const isConPassEmpty = !confirmPassword.trim();
-
-        document.querySelector('label[for="signupUsername"]').style.display = isUsernameEmpty ? 'block' : 'none';
-        document.querySelector('label[for="signupEmail"]').style.display = isEmailEmpty ? 'block' : 'none';
-        document.querySelector('label[for="signupPassword"]').style.display = isPasswordEmpty ? 'block' : 'none';
-        document.querySelector('label[for="confirmPassword"]').style.display = isConPassEmpty ? 'block' : 'none';
-
-        const xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-            const response = xhr.responseText;
-            if (response === 'success') {
-                displayAlert('Registration successful! You can now log in.', 'signupAlertContainer', true);
-                showLogin();
-            } else {
-                displayAlert(response, 'signupAlertContainer');
-            }
-        } else {
-            // Handle any HTTP error
-            displayAlert('Error connecting to the server. Please try again later.', 'signupAlertContainer');
-        }
-    }
-};
-
-xhr.open('POST', 'http://localhost/homepage/signup.php', true);
-xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-const postData = `signupUsername=${encodeURIComponent(signupUsername)}&signupEmail=${encodeURIComponent(signupEmail)}&signupPassword=${encodeURIComponent(signupPassword)}&confirmPassword=${encodeURIComponent(confirmPassword)}`;
-xhr.send(postData);
+    alertContainer.innerHTML = '';
+    alertContainer.appendChild(alert);
 }
 
-// Function to display alerts
+// Modify the existing register function
+function register() {
+    const signupUsername = document.getElementById('signupUsername').value;
+    const signupEmail = document.getElementById('signupEmail').value;
+    const signupPassword = document.getElementById('signupPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    // Check if email is blank
+    if (!signupEmail.trim()) {
+        displayAlert('Email cannot be blank. Please provide a valid email.', 'signupAlertContainer');
+        return;
+    }
+
+    // Check if passwords match
+    if (signupPassword !== confirmPassword) {
+        displayAlert('Password and Confirm Password must match.', 'signupAlertContainer');
+        return;
+    }
+
+    // Use AJAX to send data to signup.php
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                // Handle the response from signup.php
+                const response = xhr.responseText;
+
+                if (response === 'success') {
+                    displayAlert('Registration successful! You can now log in.', 'signupAlertContainer', true);
+                    showLogin();
+                } else if (response === 'email_taken') {
+                    displayAlert('Email is already taken. Please choose another.', 'signupAlertContainer');
+                } else {
+                    displayAlert('Registration failed. Please try again.', 'signupAlertContainer');
+                }
+            } else {
+                // Handle any HTTP error
+                displayAlert('Error connecting to the server. Please try again later.', 'signupAlertContainer');
+            }
+        }
+    };
+
+    xhr.open('POST', 'http://localhost/homepage/signup.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    // Send the data to the server
+    const postData = `signupUsername=${encodeURIComponent(signupUsername)}&signupEmail=${encodeURIComponent(signupEmail)}&signupPassword=${encodeURIComponent(signupPassword)}&confirmPassword=${encodeURIComponent(confirmPassword)}`;
+    xhr.send(postData);
+}
+
 function displayAlert(message, containerId, success = false) {
     const container = document.getElementById(containerId);
     container.innerHTML = message;
