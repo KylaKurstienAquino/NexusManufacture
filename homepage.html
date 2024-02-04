@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexusHomepage</title>
     <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -14,24 +13,21 @@
 
 <div class="navi">
     <div class="topnav">
-        <div><i class="fa-solid fa-envelope" id="envelope"></i>nexusmanufacture@email.com</div>
-        <div><i class="fa-solid fa-phone" id="phone"></i>+6392-345-6789</div>
-        <div><i class="fa-solid fa-user" id="profileicon"></i><a href="#">Log In or Sign Up</a></div>
-        <div><i class="fa-solid fa-cart-shopping" id="carticon"></i><a href="CartPage.html">Cart</a></div>
+        <div><a href="#">nexusmanufacture@email.com</a></div>
+        <div><a href="#">+6392-345-6789</a></div>
+        <div><a href="#" onclick="openLoginModal()">Log In or Sign Up</a></div>
+        <div><a href="#">CART</a></div>
     </div>
     
     <div class="secnav">
-        <img class= "icon" src="sia/nexuscon.png" alt="sampleicon" width="70" height="70">
-        <div><a href="homepage.html">HOME</a></div>
-        <div><a href="news_page.html">NEWS</a></div>
-        <div><a href="category.html">CATEGORY</a></div>
+        <img class="icon" src="nexuscon.png" alt="nexuscon" width="90" height="90">
+        <div><a href="#">HOME</a></div>
+        <div><a href="#">NEWS</a></div>
+        <div><a href="#">CATEGORY</a></div>
         <div><a href="#">SERVICE</a></div>
-        <div><a href="item_shop.html">ITEMS</a></div>
-        <div><a href="AboutUs.html">ABOUT US</a></div>
-        <div><input type="text" placeholder="Search.."></div> 
-        <div>
-            <i class="fa-solid fa-magnifying-glass" id="glass"></i>
-        </div>
+        <div><a href="#">ITEMS</a></div>
+        <div><a href="#">ABOUT US</a></div>
+        <div><input type="text" placeholder="Search.."></div>
     </div>
 </div>
 
@@ -53,7 +49,7 @@
         <p>We explore the rapidly evolving world of automobiles, from the rise of electric vehicles and autonomous driving to groundbreaking design and sustainability initiatives. Discover how cutting-edge technology is reshaping the driving experience, ushering in a new era of efficiency, safety, and environmental consciousness.</p>
     </div>
     <div class="ov-photo-container">
-        <img src="sia/redcar.jpg" alt="Automotive Photo">
+        <img src="redcar.jpg" alt="Automotive Photo">
     </div>
 </section>
 	
@@ -428,7 +424,7 @@ function showDetails(photoNumber) {
         <span class="close" onclick="closeLoginModal()">&times;</span>
 
         <div class="big-icon">
-            <img src="sia/nexuscon.png" alt="Nexus Icon">
+            <img src="nexuscon.png" alt="Nexus Icon">
         </div>
 
         <div class="title-container">
@@ -497,18 +493,11 @@ function showDetails(photoNumber) {
     </div>
 </div>
 
-<!-- Your existing HTML content here -->
-
 <script>
-    document.getElementById('loginModal').style.display = 'none';
+	document.getElementById('loginModal').style.display = 'none';
     document.getElementById('signupModal').style.display = 'none';
-
-    const users = [
-        { username: 'user1', password: 'pass1' },
-        { username: 'user2', password: 'pass2' },
-    ];
-
-    function displayAlert(message, alertContainerId, isSuccess = false) {
+	
+	function displayAlert(message, alertContainerId, isSuccess = false) {
         const alertDiv = document.createElement('div');
         alertDiv.className = isSuccess ? 'alert success' : 'alert';
         alertDiv.innerHTML = message;
@@ -525,60 +514,126 @@ function showDetails(photoNumber) {
             alertDiv.remove();
         }, 3000);
     }
-
-    function login() {
+	
+function login() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const user = users.find(u => u.email === email && u.password === password);
-
-    if (user) {
-        displayAlert('Login successful!', 'loginAlertContainer', true);
-    } else {
-        displayAlert('Invalid email or password. Please try again or Sign Up.', 'loginAlertContainer');
-    }
+    fetch('http://localhost/homepage/login.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`,
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text(); // Assuming the response is plain text
+    })
+    .then(data => {
+        if (data === 'Login successful') {
+            displayAlert('Login successful!', 'loginAlertContainer', true);
+            // Add any further logic for a successful login
+        } else {
+            displayAlert('Error: ' + data, 'loginAlertContainer');
+            // Handle other error cases, e.g., invalid email or password
+        }
+    })
+    .catch(error => {
+        console.error('Fetch error:', error);
+        // Handle the error, e.g., display an error message to the user
+        displayAlert('Unable to connect to the server. Please try again later.', 'loginAlertContainer');
+    });
 }
 
-    function register() {
+
+// Add this function if not present
+function displayAlert(message, containerId, success = false) {
+    const alertContainer = document.getElementById(containerId);
+    const alertClass = success ? 'alert-success' : 'alert-danger';
+
+    const alert = document.createElement('div');
+    alert.className = `alert ${alertClass}`;
+    alert.textContent = message;
+
+    alertContainer.innerHTML = '';
+    alertContainer.appendChild(alert);
+}
+
+// Modify the existing register function
+function register() {
     const signupUsername = document.getElementById('signupUsername').value;
     const signupEmail = document.getElementById('signupEmail').value;
     const signupPassword = document.getElementById('signupPassword').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
-    
-    const isUsernameEmpty = !signupUsername.trim();
-    const isEmailEmpty = !signupEmail.trim();
-    const isPasswordEmpty = !signupPassword.trim();
-    const isConPassEmpty = !confirmPassword.trim();
-
-    
-    document.querySelector('label[for="signupUsername"]').style.display = isUsernameEmpty ? 'block' : 'none';
-    document.querySelector('label[for="signupEmail"]').style.display = isEmailEmpty ? 'block' : 'none';
-    document.querySelector('label[for="signupPassword"]').style.display = isPasswordEmpty ? 'block' : 'none';
-    document.querySelector('label[for="confirmPassword"]').style.display = isConPassEmpty ? 'block' : 'none';
-
-    if (isUsernameEmpty || isEmailEmpty || isPasswordEmpty || isConPassEmpty) {
-        displayAlert('Please fill in all fields.', 'signupAlertContainer');
-    } else if (users.some(u => u.email === signupEmail)) { // Change here
-        displayAlert('Email is already taken. Please choose another one.', 'signupAlertContainer');
-    }  else {
-        users.push({ username: signupUsername, email: signupEmail, password: signupPassword, confirmPassword: confirmPassword });
-
-        displayAlert('Registration successful! You can now log in.', 'signupAlertContainer', true);
-        showLogin();
+    // Check if email is blank
+    if (!signupEmail.trim()) {
+        displayAlert('Email cannot be blank. Please provide a valid email.', 'signupAlertContainer');
+        return;
     }
+
+    // Check if passwords match
+    if (signupPassword !== confirmPassword) {
+        displayAlert('Password and Confirm Password must match.', 'signupAlertContainer');
+        return;
+    }
+
+    // Use AJAX to send data to signup.php
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                // Handle the response from signup.php
+                const response = xhr.responseText;
+
+                if (response === 'success') {
+                    displayAlert('Registration successful! You can now log in.', 'signupAlertContainer', true);
+                    showLogin();
+                } else if (response === 'email_taken') {
+                    displayAlert('Email is already taken. Please choose another.', 'signupAlertContainer');
+                } else {
+                    displayAlert('Registration failed. Please try again.', 'signupAlertContainer');
+                }
+            } else {
+                // Handle any HTTP error
+                displayAlert('Error connecting to the server. Please try again later.', 'signupAlertContainer');
+            }
+        }
+    };
+
+    xhr.open('POST', 'http://localhost/homepage/signup.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    // Send the data to the server
+    const postData = `signupUsername=${encodeURIComponent(signupUsername)}&signupEmail=${encodeURIComponent(signupEmail)}&signupPassword=${encodeURIComponent(signupPassword)}&confirmPassword=${encodeURIComponent(confirmPassword)}`;
+    xhr.send(postData);
+}
+
+function displayAlert(message, containerId, success = false) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = message;
+    container.style.display = 'block';
+    container.className = success ? 'success' : 'error';
+
+    setTimeout(function () {
+        container.style.display = 'none';
+    }, 5000);
 }
 
 </script>
 
-	<script>
+<script>
     const body = document.body;
     const loginModal = document.getElementById('loginModal');
     const signupModal = document.getElementById('signupModal');
+    const topnavLink = document.querySelector('.topnav a');
 
     function openLoginModal() {
         loginModal.style.display = 'flex';
-        signupModal.style.display = 'none'; 
+        signupModal.style.display = 'none';
         body.classList.add('modal-open');
     }
 
@@ -589,7 +644,7 @@ function showDetails(photoNumber) {
 
     function openSignupModal() {
         signupModal.style.display = 'flex';
-        loginModal.style.display = 'none';  
+        loginModal.style.display = 'none';
         body.classList.add('modal-open');
     }
 
@@ -598,18 +653,20 @@ function showDetails(photoNumber) {
         body.classList.remove('modal-open');
     }
 
-    document.querySelector('.topnav a').addEventListener('click', openLoginModal);
-    document.querySelector('.already-registered a').addEventListener('click', openLoginModal);
+    // Initially hide the login form
+    loginModal.style.display = 'none';
+
+    // Attach event listener to topnav link
+    topnavLink.addEventListener('click', function () {
+        openLoginModal();
+    });
 </script>
-
-
-
 
 <!--------- Bottom Navigation --------->
 
 <div class="botnav">
     <div><a href="#">About Us</a></div>
-    <div><a href="#">Overview</a></div>
+    <div><a href="#overview">Overview</a></div>
     <div><a href="#">Contact Us</a></div>
     <div><a href="#">Career</a></div>
     <div><a href="#">Privacy Policy</a></div>
@@ -617,11 +674,7 @@ function showDetails(photoNumber) {
 </div>
 
 <div class="secbotnav">
-    <div><a href="#">Copyright © 2023 NexusManufacture. All Rights Reserve</a></div>
-    <i class="fa-brands fa-facebook" id="facebook"></i>
-    <i class="fa-brands fa-instagram" id="instagram"></i>
-    <i class="fa-brands fa-youtube" id="youtube"></i>
-    <i class="fa-brands fa-pinterest" id="pinterest"></i>
+    <div><a href="#">Copyright © 2023 NexusManufacture. All Rights Reserved</a></div>
 </div>
 
 </body>
