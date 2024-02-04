@@ -177,25 +177,25 @@
         </div>
         <div><label for="dpay">Downpayment: </label>
             <select class="payd" id="dpay">
-                <option value="0"> </option>
+                <option value="default"> </option>
                 <option value="1">20%</option>
                 <option value="2">30%</option>
                 <option value="3">40%</option>
                 <option Value="4">50%</option>
             </select>
         </div>
-        <div><label for="tol">Terms of Loan: </label>
+        <div><label for="tolo">Terms of Loan (months): </label>
             <select class="terol" id="tol">
-                <option value="0"> </option>
-                <option value="1">12 months</option>
-                <option value="2">24 months</option>
-                <option value="3">36 months</option>
-                <option Value="4">48 months</option>
+                <option value="default"> </option>
+                <option value="1">12</option>
+                <option value="2">24</option>
+                <option value="3">36</option>
+                <option Value="4">48</option>
             </select>
         </div>
-        <div><label for="res">Result: </label> <input type="int" id="res" name="resu" readonly> </div>
+        <div><label for="res">Result: </label> <input type="text" id="res" name="resu" readonly> </div>
 
-        <div><button onclick="calculate()">CALCULATE</button></div>
+        <div><button id="tocalcbtn">CALCULATE</button></div>
     </div>
     </div>
 

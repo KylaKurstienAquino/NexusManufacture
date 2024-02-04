@@ -25,6 +25,8 @@ window.onload = function () {
     var veccat = document.getElementById('veccat')
     var vectype = document.getElementById('vectype')
     var val = document.getElementById('val')
+    var tocalcbtn = document.getElementById('tocalcbtn')
+
 
     for(var y in vehicleoptions){
         comp1.options[comp1.options.length] = new Option(y)
@@ -90,11 +92,67 @@ window.onload = function () {
         }
         else {
             for(let i=0; i<z.length; i++){
-                val.value = z ;
+                val.value = "₱" + z ;
             }
         }
         
         
     }
 
-}
+    tocalcbtn.onclick = function(){
+        var dpay = document.getElementById('dpay')
+        var res = document.getElementById('res')
+        var tol = document.getElementById('tol')
+        var price = vehiclepriceoptions[veccat.value][this.value]; 
+        var priceNum = price;
+        var percent = dpay.selectedIndex; 
+        var dwnnum = price * percentToDecimal;
+        var months = tol.selectedIndex; 
+        var percentToDecimal;
+        var mos;
+    
+        var loanAmount = price - dwnnum;
+        var annualInterestRate = 0.05;
+        var monthlyInterestRate = annualInterestRate / 12;
+        var monthlyPay = loanAmount / mos * monthlyInterestRate ;
+        var toNumber = parseInt(monthlyPay);
+        res.value = toNumber; 
+        
+        switch (percent) {
+            case 1:
+                percentToDecimal = 0.20;
+                break;
+            case 2:
+                percentToDecimal = 0.30;
+                break;
+            case 3:
+                percentToDecimal = 0.40;
+                break;
+            case 4:
+                percentToDecimal = 0.50;
+                break;
+            default:
+                percentToDecimal = 0; 
+                break;}
+    
+        switch (months) {
+            case 1:
+                mos = 12;
+                break;
+            case 2:
+                mos = 24;
+                break;
+            case 3:
+                mos = 36;
+                break;
+            case 4:
+                mos = 48;
+                break;
+            default:
+                mos = 0; 
+                break; 
+        
+            }
+    }
+    
+        }
