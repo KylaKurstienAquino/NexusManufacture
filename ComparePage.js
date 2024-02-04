@@ -82,7 +82,6 @@ window.onload = function () {
             vectype.options[vectype.options.length] = new Option(y)
         }
     }
-    
     vectype.onchange = function() {
         z = vehiclepriceoptions[veccat.value][this.value]
 
