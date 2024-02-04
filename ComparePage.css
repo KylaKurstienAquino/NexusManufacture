@@ -90,9 +90,6 @@ a{
     width: calc(100% / 12 * 4);
     margin-left: 10%;
 }
-.compbtn1{
-    margin-left: 8%;
-}
 .specs1{
     background-color: white;
     width: calc(100% / 6 * 6);
@@ -164,9 +161,6 @@ a{
     position: relative;
     width: calc(100% / 12 * 4);
     margin-left: 10%;
-}
-.compbtn2{
-    margin-left: 8%;
 }
 .specs2{
     background-color: white;
@@ -240,9 +234,6 @@ a{
     width: calc(100% / 12 * 4);
     margin-left: 10%;
 }
-.compbtn3{
-    margin-left: 8%;
-}
 .specs3{
     background-color: white;
     width: calc(100% / 6 * 6);
@@ -314,9 +305,6 @@ a{
     position: relative;
     width: calc(100% / 12 * 4);
     margin-left: 10%;
-}
-.compbtn4{
-    margin-left: 8%;
 }
 .specs4{
     background-color: white;
