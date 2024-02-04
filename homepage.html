@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexusHomepage</title>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -13,21 +14,24 @@
 
 <div class="navi">
     <div class="topnav">
-        <div><a href="#">nexusmanufacture@email.com</a></div>
-        <div><a href="#">+6392-345-6789</a></div>
-        <div><a href="#" onclick="openLoginModal()">Log In or Sign Up</a></div>
-        <div><a href="#">CART</a></div>
+        <div><i class="fa-solid fa-envelope" id="envelope"></i><a href="#">nexusmanufacture@email.com</a></div>
+        <div><i class="fa-solid fa-phone" id="phone"></i><a href="#">+6392-345-6789</a></div>
+        <div><i class="fa-solid fa-user" id="profileicon"></i><a href="#" onclick="openLoginModal()">Log In or Sign Up</a></div>
+        <div><i class="fa-solid fa-cart-shopping" id="carticon"></i><a href="CartPage.html">CART</a></div>
     </div>
     
     <div class="secnav">
-        <img class="icon" src="nexuscon.png" alt="nexuscon" width="90" height="90">
-        <div><a href="#">HOME</a></div>
-        <div><a href="#">NEWS</a></div>
-        <div><a href="#">CATEGORY</a></div>
-        <div><a href="#">SERVICE</a></div>
-        <div><a href="#">ITEMS</a></div>
-        <div><a href="#">ABOUT US</a></div>
-        <div><input type="text" placeholder="Search.."></div>
+        <img class="icon" src="sia/nexuscon.png" alt="nexuscon" width="70" height="70">
+        <div><a href="homepage.html">HOME</a></div>
+            <div><a href="news_page.html">NEWS</a></div>
+            <div><a href="category.html">CATEGORY</a></div>
+            <div><a href="#">SERVICE</a></div>
+            <div><a href="item_shop.html">ITEMS</a></div>
+            <div><a href="AboutUs.html">ABOUT US</a></div>
+            <div><input type="text" placeholder="Search.."></div> 
+            <div>
+                <i class="fa-solid fa-magnifying-glass" id="glass"></i>
+            </div>
     </div>
 </div>
 
@@ -49,7 +53,7 @@
         <p>We explore the rapidly evolving world of automobiles, from the rise of electric vehicles and autonomous driving to groundbreaking design and sustainability initiatives. Discover how cutting-edge technology is reshaping the driving experience, ushering in a new era of efficiency, safety, and environmental consciousness.</p>
     </div>
     <div class="ov-photo-container">
-        <img src="redcar.jpg" alt="Automotive Photo">
+        <img src="sia/redcar.jpg" alt="Automotive Photo">
     </div>
 </section>
 	
@@ -424,7 +428,7 @@ function showDetails(photoNumber) {
         <span class="close" onclick="closeLoginModal()">&times;</span>
 
         <div class="big-icon">
-            <img src="nexuscon.png" alt="Nexus Icon">
+            <img src="sia/nexuscon.png" alt="Nexus Icon">
         </div>
 
         <div class="title-container">
