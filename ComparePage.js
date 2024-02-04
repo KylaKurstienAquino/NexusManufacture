@@ -85,9 +85,17 @@ window.onload = function () {
     
     vectype.onchange = function() {
         z = vehiclepriceoptions[veccat.value][this.value]
-        for(let i=0; i<z.length; i++){
-            val.value = z ;
+
+        if (vectype.value == "default") {
+            val.value = "";
         }
+        else {
+            for(let i=0; i<z.length; i++){
+                val.value = z ;
+            }
+        }
+        
+        
     }
 
 }
