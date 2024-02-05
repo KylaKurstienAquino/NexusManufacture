@@ -4,87 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="news_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Car Manufacturing News</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
-        
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-        }
-        
-        article {
-            border-bottom: 1px solid #ccc;
-            padding: 1em 0;
-        }
-        
-        article:last-child {
-            border-bottom: none;
-        }
-        
-        h2 {
-            color: #333;
-        }
-        
-        p {
-            color: #666;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Car Manufacturing News</h1>
-    </header>
-    <main id="news-list">
-        <!-- News articles will be dynamically added here -->
-    </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Assuming you have a list of news articles
-            const newsData = [
-                { title: 'Exciting New Model Release', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-                { title: 'Green Initiative Announcement', content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-                // Add more news articles as needed
-            ];
+    <div class="navi">
+        <div class="topnav">
+            <div><i class="fa-solid fa-envelope" id="envelope"></i><a href="#">nexusmanufacture@email.com</a></div>
+            <div><i class="fa-solid fa-phone" id="phone"></i><a href="#">+6392-345-6789</a></div>
+            <div><i class="fa-solid fa-user" id="profileicon"></i><a href="#">Log In or Sign Up</a></div>
+            <div><i class="fa-solid fa-cart-shopping" id="carticon"></i><a href="CartPage.html">Cart</a></div>
+        </div>
         
-            const newsList = document.getElementById('news-list');
-        
-            // Dynamically generate HTML for news articles
-            newsData.forEach(article => {
-                const articleElement = document.createElement('article');
-                articleElement.innerHTML = `
-                    <h2>${article.title}</h2>
-                    <p>${article.content}</p>
-                `;
-                newsList.appendChild(articleElement);
-            });
-        });
-        //Backend (server.js using Node.js and Express):
-        
-        const express = require('express');
-        const app = express();
-        const port = 3000;
-        
-        // Serve static files (HTML, CSS, JS)
-        app.use(express.static('public'));
-        
-        app.listen(port, () => {
-            console.log(`Server is running at http://localhost:${port}`);
-        });
-        
-    </script>
+        <div class="secnav">
+            <img class= "icon" src="sia/nexuscon.png" alt="sampleicon" width="70" height="70">
+            <div><a href="homepage.html">HOME</a></div>
+            <div><a href="news_page.html">NEWS</a></div>
+            <div><a href="category.html">CATEGORY</a></div>
+            <div><a href="#">SERVICE</a></div>
+            <div><a href="item_shop.html">ITEMS</a></div>
+            <div><a href="AboutUs.html">ABOUT US</a></div>
+            <div><input type="text" placeholder="Search.."></div> 
+            <div>
+                <i class="fa-solid fa-magnifying-glass" id="glass"></i>
+            </div>
+        </div>
+
+        <div class="news" style="color: black;">
+            Latest News
+        </div>
+
+        <div id="news-container">
+            <ul id="news-list"></ul>
+        </div>
+
+    </div>
+    
+    <div class="botnav">
+        <div><a href="#">About Us</a></div>
+        <div><a href="#">Overview</a></div>
+        <div><a href="#">Contact Us</a></div>
+        <div><a href="#">Career</a></div>
+        <div><a href="#">Privacy Policy</a></div>
+        <div><a href="#">Terms and Conditions</a></div>
+    </div>
+
+    <div class="secbotnav">
+        <div><a href="#">Copyright © 2023 NexusManufacture. All Rights Reserve</a></div>
+        <i class="fa-brands fa-facebook" id="facebook"></i>
+        <i class="fa-brands fa-instagram" id="instagram"></i>
+        <i class="fa-brands fa-youtube" id="youtube"></i>
+        <i class="fa-brands fa-pinterest" id="pinterest"></i>
+    </div>
+
+    <script src="API.js"></script>
+
 </body>
 </html>
 

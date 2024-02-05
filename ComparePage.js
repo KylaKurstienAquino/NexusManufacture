@@ -106,7 +106,7 @@ window.onload = function () {
         var price = vehiclepriceoptions[veccat.value][this.value]; 
         var priceNum = price;
         var percent = dpay.selectedIndex; 
-        var dwnnum = price * percentToDecimal;
+        var dwnnum = price * percentToDecimal;  
         var months = tol.selectedIndex; 
         var percentToDecimal;
         var mos;
