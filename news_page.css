@@ -59,6 +59,14 @@ a{
 .news-container{
     background-color: white;
 }
+li {
+    padding: 5%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(0, 0, 0, .50);
+    
+  }
 .botnav{
     background-color: rgb(0, 0, 0, 1);
     display: flex;
@@ -67,6 +75,7 @@ a{
     width: calc(100% / 12 * 12);
     height:6vh;
     margin-top: 3%;
+    bottom: 0%;
 }
 .botnav>div{
     margin-left: 9%;
@@ -78,6 +87,7 @@ a{
     position: relative;
     width: calc(100% / 12 * 12);
     height:5vh;
+    bottom: 0%;
     
 }
 .secbotnav>div{
