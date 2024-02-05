@@ -114,6 +114,13 @@ a{
     flex-wrap: wrap;
     align-items: center;
 }
+.checkboxes {
+    margin-top: 100%;
+
+}
+input[type=checkbox] {
+    margin-top: 5%;
+}
 .imgitem{
     display: flex;
     flex-wrap: wrap;
