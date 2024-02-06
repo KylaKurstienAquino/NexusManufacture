@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-	* {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-			}
 
+		*{
+			font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		}
 			body {
 				font-family: Arial, sans-serif;
 				margin: 0;
 				padding: 0;
 				background-color: #f4f4f4;
 			}
-
-
-
+			
 			.navi{
-				background-image: url("hd.jpg");
+				background-image: url("sia/cart.jpg");
 				background-repeat: no-repeat;
 				background-size: cover;
 				max-height: 500vh;
@@ -32,52 +31,47 @@
 			.icon{
 				margin-left: 4%;
 			}
-		.topnav{
-			background-color: rgb(0, 0, 0, .75);
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			width: calc(100% / 12 * 12);
-			height:5vh;
-
-		}
-		.topnav>div{
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			margin-left: 10%;
-			width: calc(100% / 12 * 1.5);
-		}
-		.secnav{
-			background-color: rgb(0, 0, 0, .75);
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			width: calc(100% / 12 * 12);
-			height: 10vh;
-			align-items: center;
-
-		}
-		.secnav>div{
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			margin-left: 5%;
-			width: calc(100% / 12 * .75);
-		}
-		
-		.cos {
+			.topnav{
+				background-color: rgb(0, 0, 0, .75);
 				display: flex;
-				justify-content: center;
+				flex-wrap: wrap;
+				position: relative;
+				width: calc(100% / 12 * 12);
+				height:5vh;
+			
+			}
+			.topnav>div{
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+				margin-left: 10%;
+				width: calc(100% / 12 * 1.5);
+			}
+			.secnav{
+				background-color: rgb(0, 0, 0, .75);
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+				width: calc(100% / 12 * 12);
+				height: 10vh;
 				align-items: center;
+			
+			}
+			.secnav>div{
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+				margin-left: 5%;
+				width: calc(100% / 12 * .75);
+			}
+			.cos{
 				text-align: center;
-				font-size: 70px;
+				font-size: 20vh;
 				padding: 5%;
 			}
-		
-		
+			
 		  .addimages {
-				/* Assuming you have a parent container for .box-container, adjust as needed */
+				
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -94,7 +88,7 @@
 				height: 70px;
 			}
 		 .addimages2 {
-				/* Assuming you have a parent container for .box-container, adjust as needed */
+				
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -116,6 +110,13 @@
             max-width: 150px; 
             text-align: center;
         }
+		
+		 #appointment-form {
+            
+            padding: 100px;
+            border-radius: 100px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 		 form {
             display: grid;
             gap: 10px;
@@ -128,7 +129,7 @@
         input [id="fname"],input [id="phone"],input [id="address"],input [id="category"],input [id="vehicle"],
         textarea {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             box-sizing: border-box;
         }
 
@@ -143,9 +144,6 @@
         button:hover {
             background-color: #555;
         }
-
-		
-		
 		.botnav{
 			background-color: rgb(0, 0, 0, 1);
 			display: flex;
@@ -171,6 +169,30 @@
 			margin-left: 2%;
 			opacity: 50%;
 		}
+		#facebook {
+			color: white;
+			margin-left: 50%;
+			opacity: 50%;
+		}
+		
+		#instagram{
+			color: white;
+			margin-left: 2%;
+			opacity: 50%;
+		}
+		
+		#youtube{
+			color: white;
+			margin-left: 2%;
+			opacity: 50%;
+		}
+		
+		#pinterest{
+			color: white;
+			margin-left: 2%;
+			opacity: 50%;
+		}
+		
 					
     </style>
 </head>
@@ -178,95 +200,76 @@
 
 <div class="navi">
         <div class="topnav">
-            <div><a href="#">nexusmanufacture@email.com</a></div>
-            <div><a href="#">+6392-345-6789</a></div>
-            <div><a href="#">Log In or Sign Up</a></div>
-            <div><a href="#">CART</a></div>
+            <div><i class="fa-solid fa-envelope" id="envelope"></i><a href="#">nexusmanufacture@email.com</a></div>
+            <div><i class="fa-solid fa-phone" id="phone"></i><a href="#">+6392-345-6789</a></div>
+            <div><i class="fa-solid fa-user" id="profileicon"></i><a href="#">Log In or Sign Up</a></div>
+            <div><i class="fa-solid fa-cart-shopping" id="carticon"></i><a href="#">Cart</a></div>
         </div>
         
-        <div class="secnav">
-            <img class= "icon" src="logo.jpg" alt="sampleicon" width="90" height="50">
-            <div><a href="#">HOME</a></div>
-            <div><a href="#">NEWS</a></div>
-            <div><a href="#">CATEGORY</a></div>
+        <img class= "icon" src="sia/nexuscon.png" alt="sampleicon" width="70" height="70">
+            <div><a href="homepage.html">HOME</a></div>
+            <div><a href="news_page.html">NEWS</a></div>
+            <div><a href="category.html">CATEGORY</a></div>
             <div><a href="#">SERVICE</a></div>
-            <div><a href="#">ITEMS</a></div>
-            <div><a href="#">ABOUT US</a></div>
-            <div><input type="text" placeholder="Search.."></div>
+            <div><a href="item_shop.html">ITEMS</a></div>
+            <div><a href="AboutUs.html">ABOUT US</a></div>
+            <div><input type="text" placeholder="Search.."></div> 
+            <div>
+                <i class="fa-solid fa-magnifying-glass" id="glass"></i>
+            </div>
         </div>
-		
-				  <div class="aboutus" style="color: black;">
+
+        <div class="cos" style="color: white;">
             Check Our Service
         </div>
+</div>
 
 
 		 <section class="addimages" id="addimages">
 	<div class="box-container">
-        <div class="addimgcon4">
-            <img src="logo.jpg" alt="Image 4">
-            <div class="image4">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
-        </div>
-		
-			
-			<div class="addimgcon5">
-            <img src="logo.jpg" alt="Image 5">
-           <div class="image5">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
-        </div>
-		
-		
-			<div class="addimgcon5">
-            <img src="logo.jpg" alt="Image 5">
-           <div class="image5">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
-        </div>
-		
-		
-			<div class="addimgcon5">
-            <img src="logo.jpg" alt="Image 5">
-           <div class="image5">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
-        </div>
-
+		<div class="addimgcon5">
+			<img src="sia/tyy.jpg" alt="Image 5">
+			<div class="image5">Immerse yourself in the unparalleled<br> comfort and style of our cars. <br>Crafted with precision and innovation,<br> breach vehicle embodies sophistication and driving <br>pleasure.</div>
 		</div>
 		
+		<div class="addimgcon5">
+			<img src="sia/tyy.jpg" alt="Image 5">
+			<div class="image5">Discover a new level of driving sophistication.<br> Our commitment to excellence is reflected in<br> every detail, ensuring your journey<br> is not just a commute but <br>an experience.</div>
+		</div>
 		
-		
-		
+		<div class="addimgcon5">
+			<img src="sia/tyy.jpg" alt="Image 5">
+			<div class="image5">Elevate your driving experience with <br>our state-of-the-art vehicles. Impeccable<br> craftsmanship meets advanced<br> technology,<br> creating a seamless blend of style and<br> performance.</div>
+		</div>
+	</div>
+		</div>
 		</section>
-		
+	
 		<section class="addimages2" id="addimages2">
 		<div class="box-container">
-		<div class="addimgcon6">
-            <img src="logo.jpg" alt="Image 6">
-           <div class="image6">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
-        </div>
+			<div class="addimgcon6">
+				<img src="sia/tyy.jpg" alt="Image 6">
+				<div class="image6">Indulge in the perfect harmony of ,<br> style and performance. Our vehicles are a <br>testament to precision engineering and<br> timeless design, ensuring every drive is<br> exceptional.</div>
+			</div>
 		
-
-		<div class="addimgcon6">
-            <img src="logo.jpg" alt="Image 6">
-           <div class="image6">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
-        </div>
+			<div class="addimgcon6">
+				<img src="sia/tyy.jpg" alt="Image 6">
+				<div class="image6">Experience the future of driving with<br> our avant-garde cars. Unmatched innovation and<br> attention to detail come together to redefine <br>your expectations of automotive excellence.</div>
+			</div>
 		
-
-		<div class="addimgcon6">
-            <img src="logo.jpg" alt="Image 6">
-           <div class="image6">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
-        </div>
-		
-	
-		<div class="addimgcon6">
-            <img src="logo.jpg" alt="Image 6">
-           <div class="image6">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Vivamus convallis est a rhoncus<br>feugiat</div>
-        </div>
-		
-		
-		
+			<div class="addimgcon6">
+				<img src="sia/tyy.jpg" alt="Image 6">
+				<div class="image6">Step into a world where luxury<br> meets performance. Our cars are designed to <br>exceed your every expectation, making every<br> journey a celebration of automotive craftsmanship.</div>
+			</div>
+		</div>
 		
 		</div>
 		</section>
 		</div>
 		
 		 <main>
-        <div id="contact-form">
-            <form id="contact-us-form">
+        <div id="appointment-form">
+            <form id="appointment-form">
                 <label for="fname">Full Name:</label>
                 <input type="text" id="fname" name="fname" required>
 
@@ -290,14 +293,10 @@
             </form>
         </div>
     </main>
-		
-		
-		
-		
-				  <div class="botnav">
-        <div><a href="#">About Us</a></div>
+	<div class="botnav">
+        <div><a href="AboutUs.html">About Us</a></div>
         <div><a href="#">Overview</a></div>
-        <div><a href="#">Contact Us</a></div>
+        <div><a href="contact_us.html">Contact Us</a></div>
         <div><a href="#">Career</a></div>
         <div><a href="#">Privacy Policy</a></div>
         <div><a href="#">Terms and Conditions</a></div>
@@ -305,6 +304,10 @@
 
     <div class="secbotnav">
         <div><a href="#">Copyright © 2023 NexusManufacture. All Rights Reserve</a></div>
+        <i class="fa-brands fa-facebook" id="facebook"></i>
+        <i class="fa-brands fa-instagram" id="instagram"></i>
+        <i class="fa-brands fa-youtube" id="youtube"></i>
+        <i class="fa-brands fa-pinterest" id="pinterest"></i>
     </div>
 </body>
 </html>

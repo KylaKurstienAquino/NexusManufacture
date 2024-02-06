@@ -56,6 +56,9 @@ a{
     font-size: 20vh;
     padding: 5%;
 }
+.newsbox{
+    background-color: white;
+}
 .news-container{
     background-color: white;
 }
