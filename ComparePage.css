@@ -119,23 +119,6 @@ a{
     overflow: scroll;
     overflow-x:hidden ;
 }
-.specparts1{
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    float: left;
-    width: calc(100% / 6 * 1.5);
-    margin-left: .5%;
-    background-color: gray;
-}
-.specinfo1{
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    margin-left: 27%;
-    float: right;    
-    width: calc(100% / 6 * 5);
-}
 
 .compbox2{
     display: flex;

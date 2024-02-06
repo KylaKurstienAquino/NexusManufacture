@@ -38,6 +38,9 @@ window.onload = function () {
         for(let i=0; i<z.length; i++){
             veh1.options[veh1.options.length] = new Option(z[i])
         }
+
+
+
     }
     for(var y in vehicleoptions){
         comp2.options[comp2.options.length] = new Option(y)
@@ -100,59 +103,105 @@ window.onload = function () {
     }
 
     tocalcbtn.onclick = function(){
-        var dpay = document.getElementById('dpay')
-        var res = document.getElementById('res')
-        var tol = document.getElementById('tol')
-        var price = vehiclepriceoptions[veccat.value][this.value]; 
-        var priceNum = price;
-        var percent = dpay.selectedIndex; 
-        var dwnnum = price * percentToDecimal;  
-        var months = tol.selectedIndex; 
-        var percentToDecimal;
-        var mos;
-    
-        var loanAmount = price - dwnnum;
-        var annualInterestRate = 0.05;
-        var monthlyInterestRate = annualInterestRate / 12;
-        var monthlyPay = loanAmount / mos * monthlyInterestRate ;
-        var toNumber = parseInt(monthlyPay);
-        res.value = toNumber; 
         
-        switch (percent) {
-            case 1:
-                percentToDecimal = 0.20;
-                break;
-            case 2:
-                percentToDecimal = 0.30;
-                break;
-            case 3:
-                percentToDecimal = 0.40;
-                break;
-            case 4:
-                percentToDecimal = 0.50;
-                break;
-            default:
-                percentToDecimal = 0; 
-                break;}
-    
-        switch (months) {
-            case 1:
-                mos = 12;
-                break;
-            case 2:
-                mos = 24;
-                break;
-            case 3:
-                mos = 36;
-                break;
-            case 4:
-                mos = 48;
-                break;
-            default:
-                mos = 0; 
-                break; 
+            var veccat = document.getElementById('veccat');
+            var vectype = document.getElementById('vectype');
+            var val = document.getElementById('val');
+            var dpay = document.getElementById('dpay');
+            var tol = document.getElementById('tol');
+            var res = document.getElementById('res');
+            var tocalcbtn = document.getElementById('tocalcbtn');
         
+            // Populate category dropdown
+            for (var y in vehiclepriceoptions) {
+                veccat.options[veccat.options.length] = new Option(y);
             }
+        
+            // Handle category change
+            veccat.onchange = function () {
+                vectype.length = 1;
+                val.value = "";
+        
+                for (var y in vehiclepriceoptions[this.value]) {
+                    vectype.options[vectype.options.length] = new Option(y);
+                }
+            }
+        
+            // Handle CALCULATE button click
+            tocalcbtn.onclick = function () {
+                var price = vehiclepriceoptions[veccat.value][vectype.value];
+                var percentToDecimal;
+                var mos;
+        
+                // Get downpayment percentage
+                switch (dpay.value) {
+                    case "1":
+                        percentToDecimal = 0.20;
+                        break;
+                    case "2":
+                        percentToDecimal = 0.30;
+                        break;
+                    case "3":
+                        percentToDecimal = 0.40;
+                        break;
+                    case "4":
+                        percentToDecimal = 0.50;
+                        break;
+                    default:
+                        percentToDecimal = 0;
+                        break;
+                }
+        
+                // Get loan terms in months
+                switch (tol.value) {
+                    case "1":
+                        mos = 12;
+                        break;
+                    case "2":
+                        mos = 24;
+                        break;
+                    case "3":
+                        mos = 36;
+                        break;
+                    case "4":
+                        mos = 48;
+                        break;
+                    default:
+                        mos = 0;
+                        break;
+                }
+        
+                var priceNum = parseFloat(price.join('').replace(/,/g, '')); // Convert price array to number
+                var dwnnum = priceNum * percentToDecimal;
+                var loanAmount = priceNum - dwnnum;
+                var monthlyInterestRate = 0.05 / 12; // Assuming annual interest rate is 5%
+        
+                // Calculate monthly payment
+                var monthlyPay = loanAmount * monthlyInterestRate / (1 - Math.pow(1 + monthlyInterestRate, -mos));
+        
+                // Display results
+                res.value += monthlyPay.toFixed(2);
+            }
+        
+        
     }
     
+    const speccat = document.getElementById('speccat');
+    const tableInfo = document.createElement('li');
+    tableInfo.textContent = 'New Element';
+    speccat.appendChild(tableInfo);
+
+    fetch('ComparePage.php')
+  .then(response => response.json())
+  .then(data => {
+    // Process the fetched data here
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+
+
+
+
         }

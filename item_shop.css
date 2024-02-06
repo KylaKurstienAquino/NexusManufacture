@@ -90,6 +90,13 @@ thead {
     background-color: black;
     color: white;
   }
+
+  #confirmbtn {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    padding: 10%;
+  }
 .botnav{
     background-color: rgb(0, 0, 0, 1);
     display: flex;
