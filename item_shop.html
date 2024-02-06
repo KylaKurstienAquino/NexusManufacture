@@ -36,11 +36,11 @@
         </div>
     </div>
 
-    <div class="shopbody">
-        <div class="catavailrange">
-            <div class="catname">Categories</div> 
-            <div class="catecheck">
-                <form>
+        <div class="shopbody">
+            <div class="catavailrange">
+                <div class="catname">Categories</div> 
+                    <div class="catecheck">
+                    <form>
                     <div class="checkboxes">
                         <input type="checkbox" id="part1" name="part1" value="carpart1">
                         <label for="part1"> Battery </label><br>
@@ -72,17 +72,39 @@
                         <label for="part12"> Dusk Blankets </label><br>  
                     </div>
                     
-                </form>
-                
+                    </form>
+                    </div>
+            </div>
+            <div class="items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Buttons</th>
+                        </tr>
+                        <!-- PHP CODE TO FETCH DATA FROM ROWS -->
+                        <?php
+                        while ($row = $result1->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td><img src='" . $row['image'] . "' alt='Product Image'></td>";
+                            echo "<td>" . $row['name'] . "</td>";
+                            echo "<td>$" . $row['price'] . "</td>";
+                            echo "<td><button onclick='addToCart(" . $row['id'] . ")'>Add to Cart</button></td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                    </thead>
+                    <tbody id="data ">
+
+                    </tbody>
+                    
+                </table>
             </div>
         </div>
 
-        <div class="items">
-            
-        </div>
-
-
-    </div>
+       
     
 
     <div class="botnav">
@@ -101,6 +123,7 @@
         <i class="fa-brands fa-youtube" id="youtube"></i>
         <i class="fa-brands fa-pinterest" id="pinterest"></i>
     </div>
+
     <script src="item_shop.js"></script>
 </body>
 </html>

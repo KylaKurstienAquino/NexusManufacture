@@ -55,6 +55,11 @@ a{
     font-size: 20vh;
     padding: 5%;
 }
+.shopbody{
+    display: flex;
+    position: relative;
+    width: calc(100% / 12 * 12);
+}
 .catavailrange{
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +67,29 @@ a{
     width: calc(100% / 12 * 5.75);
     float: left;
 }
-
+.catecheck {
+    margin-top: 5%;
+}
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: calc(100% / 12 * 5.75);
+    float: right;
+    border: solid;
+    background-color: grey;
+    height: 100vh;
+    overflow-y: scroll;
+}
+table {
+    width: calc(100% / 12 * 12);
+    background-color: grey
+}
+thead {
+    width: calc(100% / 12 * 12);
+    background-color: black;
+    color: white;
+  }
 .botnav{
     background-color: rgb(0, 0, 0, 1);
     display: flex;
