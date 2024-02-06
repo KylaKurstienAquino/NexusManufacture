@@ -1,3 +1,7 @@
+<?php 
+require_once('item_shop.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,20 +88,22 @@
                             <th>Price</th>
                             <th>Buttons</th>
                         </tr>
-                        <!-- PHP CODE TO FETCH DATA FROM ROWS -->
-                        <?php
-                        while ($row = $result1->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td><img src='" . $row['image'] . "' alt='Product Image'></td>";
-                            echo "<td>" . $row['name'] . "</td>";
-                            echo "<td>$" . $row['price'] . "</td>";
-                            echo "<td><button onclick='addToCart(" . $row['id'] . ")'>Add to Cart</button></td>";
-                            echo "</tr>";
-                        }
-                        ?>
                     </thead>
                     <tbody id="data ">
-
+                            <!-- PHP CODE TO FETCH DATA FROM ROWS -->
+                            <?php 
+                            while($row = mysqli_fetch_assoc($result1))
+                            {
+                            ?>
+                            <tr>
+                            <td><?php echo $rows['images'];?></td>
+                            <td><?php echo $rows['battery_name'];?></td>
+                            <td><?php echo $rows['problems'];?></td>
+                            <td><?php echo $rows['score'];?></td>
+                            </tr>
+                            <?php
+                            }
+                            ?>
                     </tbody>
                     
                 </table>
