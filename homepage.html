@@ -17,6 +17,9 @@
         <div><i class="fa-solid fa-envelope" id="envelope"></i><a href="#">nexusmanufacture@email.com</a></div>
         <div><i class="fa-solid fa-phone" id="phone"></i><a href="#">+6392-345-6789</a></div>
         <div><i class="fa-solid fa-user" id="profileicon"></i><a href="#" onclick="openLoginModal()">Log In or Sign Up</a></div>
+		<div id="user-info-container">
+        <!-- This div will be updated dynamically based on user login status -->
+    </div>
         <div><i class="fa-solid fa-cart-shopping" id="carticon"></i><a href="CartPage.html">CART</a></div>
     </div>
     
@@ -538,6 +541,7 @@ function login() {
     })
     .then(data => {
         if (data === 'Login successful') {
+            displayUserInfo(email);  // Display email (username) after successful login
             displayAlert('Login successful!', 'loginAlertContainer', true);
             // Add any further logic for a successful login
         } else {
@@ -552,7 +556,39 @@ function login() {
     });
 }
 
+function displayUserInfo(username) {
+    const topnavLoginSignup = document.querySelector('.topnav div:nth-child(3) a');
+    const userInfoContainer = document.createElement('div');
+    
+    // Update the container with the username and a logout button
+    userInfoContainer.innerHTML = `<span id="username">${username}</span><button onclick="logout()">Logout</button>`;
+    userInfoContainer.classList.add('user-info-container');
 
+    // Replace the topnav login/signup link with the user info container
+    topnavLoginSignup.replaceWith(userInfoContainer);
+}
+    // Assume this function is called when the user clicks the logout button
+    function logout() {
+        // Implement the logic to log the user out, e.g., redirect to a logout page or clear session
+        // After logout, you may want to update the user information container to remove the username and logout button
+        const userInfoContainer = document.querySelector('.user-info-container');
+        const topnav = document.querySelector('.topnav');
+        const loginSignupLink = document.createElement('div');
+        
+        // Recreate the login/signup link and replace the user info container
+        loginSignupLink.innerHTML = '<i class="fa-solid fa-user" id="profileicon"></i><a href="#" onclick="openLoginModal()">Log In or Sign Up</a>';
+        loginSignupLink.classList.add('login-signup-link');
+        userInfoContainer.replaceWith(loginSignupLink);
+    }
+
+    const isLoggedIn = false;  // Set to true if the user is logged in, false otherwise
+
+// Check user login status and display user info if logged in
+if (isLoggedIn) {
+    // Replace 'JohnDoe' with the actual username retrieved from your login logic
+    displayUserInfo('JohnDoe');
+}
+	
 // Add this function if not present
 function displayAlert(message, containerId, success = false) {
     const alertContainer = document.getElementById(containerId);
