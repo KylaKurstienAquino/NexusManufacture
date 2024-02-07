@@ -21,6 +21,7 @@ window.onload = function () {
     var veh3 = document.getElementById('veh3')
     var comp4 = document.getElementById('comp4')
     var veh4 = document.getElementById('veh4')
+    var speccat = document.getElementById('speccat');
 
     var veccat = document.getElementById('veccat')
     var vectype = document.getElementById('vectype')
@@ -39,9 +40,29 @@ window.onload = function () {
             veh1.options[veh1.options.length] = new Option(z[i])
         }
 
-
+        veh1.onchange = function () {
+            var selectedVehicle = veh1.value;
+        
+            // Fetch JSON data from the file
+            fetch('Items.json')
+                .then(response => response.json())
+                .then(data => {
+                    var vehicleData = data.find(Items => Items.vehiclename === selectedVehicle);
+                    // Clear previous specifications
+                    speccat.innerHTML = '';
+        
+                    // Populate speccat with the specifications of the selected vehicle
+                    for (var key in vehicleData) {
+                        var listItem = document.createElement('li');
+                        listItem.textContent = key + ': ' + vehicleData[key];
+                        speccat.appendChild(listItem);
+                    }
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+        };
 
     }
+    
     for(var y in vehicleoptions){
         comp2.options[comp2.options.length] = new Option(y)
     }
@@ -186,20 +207,6 @@ window.onload = function () {
         
     }
     
-    const speccat = document.getElementById('speccat');
-    const tableInfo = document.createElement('li');
-    tableInfo.textContent = 'New Element';
-    speccat.appendChild(tableInfo);
-
-    fetch('ComparePage.php')
-  .then(response => response.json())
-  .then(data => {
-    // Process the fetched data here
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
 
 
 
